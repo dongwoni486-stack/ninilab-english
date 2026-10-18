@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 생존 회화 / Unit 12 American School Life (미국 학교 문화)
+const KID = 'Seoah';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '12', unitTitle: 'American School Life', startPage: 92,
+  cover: { title: 'American<br>School Life', subtitle: '미국 학교 문화와 행사 · 알면 더 즐거워요' },
+  tip: '부모님께: 학교 행사와 문화는 학교·주마다 달라요. 안내문(permission slip 등)은 꼭 확인하시고, 궁금한 점은 담임 선생님께 편하게 물어보세요.',
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '아침 시간과 특별한 날' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '아침 교실. Ms. Brown이 이번 주 행사를 알려 줘요.', lines: [
+        { who: 'Ms. Brown', en: 'Good morning, class! Please stand up.', ko: '여러분 좋은 아침! 모두 일어서세요.' },
+        { who: 'Emma', en: `${KID}, we say the Pledge every morning.`, ko: '아침마다 Pledge(맹세)를 해.' },
+        { who: KID, me: true, en: 'What do I do?', ko: '나는 뭘 해야 해?' },
+        { who: 'Emma', en: 'You can just stand with us.', ko: '그냥 같이 서 있어도 돼.' },
+        { who: 'Ms. Brown', en: 'Tomorrow is Pajama Day!', ko: '내일은 잠옷 입는 날이에요!' },
+        { who: KID, me: true, en: 'Really? That sounds fun!', ko: '정말요? 재미있겠다!' },
+        { who: 'Ms. Brown', en: 'Yes! Wear your pajamas to school.', ko: '그래요! 잠옷 입고 학교에 오세요.' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: 'Please stand up.', ko: '일어서 주세요.', note: '아침 Pledge 시간에 자주 들어요.' },
+        { en: 'What do I do?', ko: '나는 뭘 하면 돼요?', note: '모르는 행사에서 유용해요.' },
+        { en: 'Tomorrow is Pajama Day.', ko: '내일은 잠옷의 날이에요.', note: 'Spirit Week 중 하나인 경우가 많아요.' },
+        { en: 'That sounds fun!', ko: '재미있겠다!', note: '' } ] },
+      { type: 'tip', pose: 'idea', text: '<b>Pledge of Allegiance</b>는 국기에 하는 맹세예요. 참여가 의무가 아닌 경우가 많아요. 불편하면 조용히 서 있어도 돼요. 방침은 선생님께 물어보세요.' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Events', title: '학교 행사 영어' },
+      { type: 'phrases', items: [
+        { en: "It's my turn for show and tell.", ko: '내가 show and tell 할 차례예요.', note: '좋아하는 물건을 가져와 소개해요.' },
+        { en: 'This is my favorite toy.', ko: '이건 내가 제일 좋아하는 장난감이에요.', note: 'show and tell 첫 문장으로 좋아요.' },
+        { en: 'I need a permission slip.', ko: '허락서가 필요해요.', note: '현장학습엔 부모님 서명이 필요한 경우가 많아요.' },
+        { en: 'We have a field trip.', ko: '우리 현장학습 가요.', note: 'field trip = 소풍·견학' },
+        { en: 'It\'s Spirit Week.', ko: '스피릿 위크예요.', note: '매일 다른 테마로 입는 주간' },
+        { en: 'I got my report card.', ko: '성적표를 받았어요.', note: '학기마다 집에 보내는 경우가 많아요.' } ] },
+      { type: 'section', tag: 'Polite', title: '남부 예절 가볍게 배우기' },
+      { type: 'phrases', items: [
+        { en: "Yes, ma'am.", ko: '네. (여성 어른에게)', note: '앨라배마에서 자주 들려요.' },
+        { en: 'Yes, sir.', ko: '네. (남성에게)', note: '어른에게 공손하게' },
+        { en: 'Thank you, y\'all!', ko: '모두 고마워요!', note: 'y\'all = you all (남부식)' },
+        { en: 'Excuse me.', ko: '실례합니다.', note: '지나갈 때, 말 걸 때' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '현장학습 때 부모님이 서명하는 경우가 많은 종이는?',
+          choices: ['report card', 'permission slip', 'lost and found'], answer: '②', lines: 0,
+          sol: { idea: 'permission = 허락, slip = 작은 종이. 그래서 "허락서"예요.',
+            steps: ['현장학습 = field trip', '부모님 허락 = permission slip'],
+            mistake: 'report card는 성적표예요. 서명이 필요할 수는 있지만 허락서는 아니에요.',
+            parent: '안내문이 오면 날짜를 함께 확인해 주세요.' } },
+        { label: '연습 2', level: '하', question: '선생님이 "Please stand up."이라고 하면 뭘 해야 할까요?',
+          choices: ['앉기', '일어서기', '손 씻기'], answer: '②', lines: 0,
+          sol: { idea: 'stand up = 일어서다. up이 위로 올라가는 느낌이에요.',
+            steps: ['stand = 서다', 'up = 위로 → 일어서다'],
+            more: '반대는 Sit down. (앉으세요)' } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br>' + big('Teacher: Are you ready, Seoah?<br>You: Yes, ________.'), lines: 1, answer: "ma'am",
+          sol: { idea: "여성 선생님께 공손하게 대답할 때 Yes, ma'am.을 써요. 남성에게는 sir.",
+            steps: ['여성 어른 → ma\'am', '남성 어른 → sir'],
+            check: '앨라배마에서는 흔하지만, 안 써도 무례한 건 아니에요.' } },
+        { label: '연습 4', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br>' + big('We have a field ________ tomorrow.'), lines: 1, answer: 'trip',
+          sol: { idea: 'field trip = 학교 밖으로 나가는 현장학습이에요.',
+            steps: ['field = 현장', 'trip = 여행·나들이 → 현장학습'],
+            more: 'bus(버스), lunch box(도시락)도 같이 익혀 두면 좋아요.' } }
+      ] },
+      { type: 'card', label: '역할 놀이', level: '중', title: ' 엄마·아빠와 학교 행사 연습하기', question: '부모님이 Ms. Brown, 내가 나로 앞 쪽 대화를 해 보세요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ What do I do? □ That sounds fun! □ Yes, ma\'am. □ Thank you!',
+        answer: '(활동)', sol: { idea: '문화 행사는 미리 알면 덜 낯설어요. 말해 보는 것이 가장 큰 연습이에요.', steps: ['대화를 먼저 소리 내어 읽기', '내 대사를 가리고 말하기', '역할을 바꿔서 해 보기'], parent: '우리 반에 Pajama Day가 있다면 뭘 입을지 이야기해 보세요.' } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '빈칸을 채워 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">This is my ______________.<br>Tomorrow is ______________ Day.<br>That sounds ______________!</span>',
+        answer: `(예) This is my teddy bear. Tomorrow is Pajama Day. That sounds fun!`,
+        sol: { idea: 'show and tell과 행사 이야기를 할 때 쓰는 세 문장이에요.',
+          steps: ['This is my + 물건', 'Tomorrow is + 행사', 'That sounds + 느낌 단어'],
+          mistake: 'sounds 뒤에는 fun, great 같은 형용사를 써요.',
+          more: '학교마다 행사 이름은 달라요. 안내문을 확인하세요.' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

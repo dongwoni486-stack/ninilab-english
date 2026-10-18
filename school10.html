@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 첫걸음 / Unit 10 How Do You Feel?
+const KID = 'Seoah';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '10', unitTitle: 'How Do You Feel?', startPage: 76,
+  cover: { title: 'How Do<br>You Feel?', subtitle: '감정 표현하기와 도움 요청하기' },
+  tip: '부모님께: 괴롭힘이나 놀림이 있으면 혼자 참지 않고 어른에게 말하도록 꼭 알려 주세요. "Tell a teacher"는 고자질이 아니라 안전을 위한 행동이에요.',
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '친구 기분 살피고 위로하기' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '점심시간. Emma가 풀이 죽어 있어요.', lines: [
+        { who: KID, me: true, en: 'Hi, Emma. Are you okay?', ko: '안녕, Emma. 괜찮아?' },
+        { who: 'Emma', en: "I'm sad. I lost my pencil case.", ko: '슬퍼. 필통을 잃어버렸어.' },
+        { who: KID, me: true, en: "I'm sorry. Want to look together?", ko: '안됐다. 같이 찾아볼래?' },
+        { who: 'Emma', en: 'Yes, please. Thank you.', ko: '응, 부탁해. 고마워.' },
+        { who: KID, me: true, en: "Don't worry. We can find it.", ko: '걱정 마. 우리 찾을 수 있어.' },
+        { who: 'Emma', en: "Here it is! I'm so happy!", ko: '여기 있다! 너무 기뻐!' },
+        { who: KID, me: true, en: "Yay! I'm happy, too.", ko: '야호! 나도 기뻐.' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: "I'm happy.", ko: '기뻐요.', note: "I'm + 기분 단어로 말해요." },
+        { en: "I'm nervous.", ko: '긴장돼요.', note: '발표나 시험 전에 자주 써요.' },
+        { en: 'Are you okay?', ko: '괜찮아?', note: '기분이 안 좋아 보이는 친구에게' },
+        { en: "Don't worry.", ko: '걱정 마.', note: '위로할 때' } ] },
+      { type: 'tip', pose: 'idea', text: '기분을 말하는 건 <b>약한 게 아니야</b>. 미국 학교에서는 감정을 말로 표현하도록 가르치는 경우가 많아!' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Feelings', title: '감정 단어와 위로 말' },
+      { type: 'phrases', items: [
+        { en: "I'm sad.", ko: '슬퍼요.', note: '' },
+        { en: "I'm excited!", ko: '신나요!', note: '소풍·생일 전날' },
+        { en: "I'm angry.", ko: '화가 나요.', note: '' },
+        { en: "I'm sorry.", ko: '안됐다. / 미안해.', note: '위로와 사과 모두 가능' },
+        { en: 'Do you want to play with me?', ko: '나랑 같이 놀래?', note: '혼자 있는 친구에게' },
+        { en: "It's okay.", ko: '괜찮아.', note: '' } ] },
+      { type: 'section', tag: 'Help', title: '놀림·괴롭힘 대처하기' },
+      { type: 'phrases', items: [
+        { en: 'Stop, please.', ko: '그만해 줘.', note: '단호하게, 큰 소리로' },
+        { en: "I don't like that.", ko: '그거 싫어.', note: '' },
+        { en: "I'll tell the teacher.", ko: '선생님께 말할 거야.', note: '고자질이 아니라 도움 요청' },
+        { en: 'Can I talk to you?', ko: '말씀드려도 돼요?', note: '선생님께' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '친구가 울고 있어요. 먼저 뭐라고 물을까요?',
+          choices: ['Are you okay?', "I'm excited!", 'Stop, please.'], answer: '①', lines: 0,
+          sol: { idea: '기분이 안 좋아 보이는 친구에겐 먼저 안부를 물어요.',
+            steps: ["I'm excited! = 내 기분 말하기", 'Stop, please. = 싫은 행동 멈추기', 'Are you okay? = 상대 안부 묻기'],
+            mistake: '친구가 우는데 Stop, please.라고 하면 다른 뜻이 돼요. 상황에 맞춰야 해요.',
+            parent: '울적한 표정을 짓고 "아이가 뭐라고 물어볼까?" 해 보세요.' } },
+        { label: '연습 2', level: '하', question: '친구가 계속 놀려요. 하지 말라고 말하는 문장은?<br>' + big('________'),
+          choices: ["I'm happy.", 'Stop, please.', 'Can I play?'], answer: '②', lines: 0,
+          sol: { idea: '싫은 행동은 짧고 분명하게 "Stop, please."라고 말해요.',
+            steps: ['Stop = 멈춰', 'please를 붙여도 단호하게 말하면 돼요'],
+            more: '그래도 계속하면 "I\'ll tell the teacher."라고 말하고 선생님께 가요.',
+            parent: '집에서 큰 목소리로 Stop, please. 연습을 해 보세요.' } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '내일 소풍이라 신나요. 빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">I\'m ________!</span>', lines: 1, answer: 'excited',
+          sol: { idea: '신나는 기분은 excited예요. I\'m + 기분 단어 틀을 써요.',
+            steps: ['기분 단어: excited', "I'm + excited"],
+            mistake: 'I am excited처럼 am을 쓰면 돼요. I excited는 틀려요.',
+            more: "nervous(긴장), happy(기쁨)도 같은 틀이에요." } },
+        { label: '연습 4', level: '중', question: '누군가 계속 괴롭혀요. 선생님께 알리는 문장을 완성하세요.<br><span class="en" style="font-size:15px;font-weight:800">I\'ll ________ the teacher.</span>', lines: 1, answer: 'tell',
+          sol: { idea: '"I\'ll tell ~"은 "~에게 말할 거야"라는 뜻이에요.',
+            steps: ["I'll = I will의 줄임말", 'tell = 말하다 + 누구에게'],
+            check: '위험하거나 계속되면 바로 어른에게 말하는 게 맞아요.',
+            mistake: '"say the teacher"는 어색해요. tell + 사람으로 써요.' } }
+      ] },
+      { type: 'card', label: '역할 놀이', level: '중', title: '엄마·아빠와 기분 말하기', question: '부모님이 기분 카드를 보여 주면 "I\'m ___."로 말해요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ I\'m happy. □ I\'m nervous. □ Stop, please. □ I\'ll tell the teacher.',
+        answer: '(활동)', sol: { idea: '기분을 말로 하면 어른이 도와줄 수 있어요. 연습할수록 말이 쉬워져요.', steps: ['표정을 보고 기분 단어 말하기', '위로 말: Don\'t worry.', '싫을 때: Stop, please.'], parent: '아이의 기분을 먼저 들어 주세요. "How do you feel?"로 물어보세요.' } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '빈칸을 채워 오늘 내 기분을 말해 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">I\'m ______________ today.<br>I feel ______________ because ______________.<br>I need ______________.</span>',
+        answer: "(예) I'm happy today. I feel excited because I have art class. I need my crayons.",
+        sol: { idea: '기분, 이유, 필요한 것 순서로 말하면 어른이 이해하기 쉬워요.',
+          steps: ["I'm + 기분", 'because + 이유', 'I need + 필요한 것'],
+          mistake: 'because 뒤에는 문장이 와요. because art class는 어색해요.',
+          more: '다음 유닛에서는 지금까지 배운 표현을 총정리해요.' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

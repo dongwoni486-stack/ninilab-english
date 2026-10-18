@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 생활 첫걸음 (가족편) / Unit 04 Bank & Phone
+const ME = 'Me';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 생활 첫걸음 (가족편)',
+  gradeLabel: '주재원 가족 생활 영어',
+  theme: { main:'#ff7a45', sub:'#ffe6da', ink:'#2b2d3a', card:'#fff4ee' },
+  unitNo: '04', unitTitle: 'Bank & Phone', startPage: 28,
+  cover: { title: 'Bank &<br>Phone', subtitle: '계좌 개설부터 휴대폰 개통까지 · 가족편 Unit 4' },
+  tip: '필요 서류, 수수료, 요금은 은행·통신사·시기마다 달라요. 방문 전 웹사이트나 전화로 확인하고, 창구에서는 "What do I need to bring?"라고 물어보세요.',
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '은행에서 계좌 열기' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '은행 창구. 직원 Karen이 도와줘요.', lines: [
+        { who: 'Karen', en: 'Hi, how can I help you today?', ko: '안녕하세요, 무엇을 도와드릴까요?' },
+        { who: ME, me: true, en: "Hi. I'd like to open a checking account.", ko: '안녕하세요. 체킹 계좌를 열고 싶어요.' },
+        { who: 'Karen', en: 'Sure. Do you have your passport with you?', ko: '네. 여권 가지고 계세요?' },
+        { who: ME, me: true, en: 'Yes, here you go. Do you need anything else?', ko: '네, 여기요. 다른 게 더 필요한가요?' },
+        { who: 'Karen', en: 'I need proof of address, too.', ko: '주소 증빙도 필요해요.' },
+        { who: ME, me: true, en: 'I have my lease. Is that okay?', ko: '임대계약서가 있어요. 괜찮을까요?' },
+        { who: 'Karen', en: "That should work. I'll order your debit card.", ko: '될 거예요. 체크카드를 신청해 드릴게요.' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: "I'd like to open an account.", ko: '계좌를 열고 싶어요.', note: "I'd like to ~는 I want to ~보다 공손해요." },
+        { en: 'Here you go.', ko: '여기 있어요.', note: '서류나 물건을 건넬 때 쓰는 말' },
+        { en: 'Is that okay?', ko: '그래도 괜찮을까요?', note: '대체 서류나 방법을 제안할 때' },
+        { en: 'How long will it take?', ko: '얼마나 걸리나요?', note: '카드 도착, 개설 소요 시간 확인' } ] },
+      { type: 'tip', pose: 'idea', text: '은행 계좌는 <b>checking(입출금·체크카드용)</b>과 <b>savings(저축)</b>로 나뉘는 경우가 많아요. 필요한 서류는 은행마다 달라서 미리 확인하는 게 안전해요.' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Bank', title: '은행에서 자주 쓰는 문장' },
+      { type: 'phrases', items: [
+        { en: 'What do I need to bring?', ko: '무엇을 가져와야 하나요?', note: '방문 전 서류를 물어볼 때' },
+        { en: 'Is there a monthly fee?', ko: '월 수수료가 있나요?', note: '조건에 따라 면제되는 경우도 있어요' },
+        { en: 'Can I get a debit card today?', ko: '체크카드를 오늘 받을 수 있나요?', note: '우편으로 오는 경우도 많아요' },
+        { en: 'Can I set up online banking?', ko: '온라인 뱅킹도 설정할 수 있나요?', note: '앱 가입도 같이 부탁해 보세요' },
+        { en: 'Can you spell that, please?', ko: '철자를 불러 주실래요?', note: '이름·주소를 못 알아들었을 때' },
+        { en: 'Could you say that again?', ko: '다시 말씀해 주실래요?', note: 'Can you보다 Could you가 조금 더 정중' } ] },
+      { type: 'section', tag: 'Phone', title: '휴대폰 개통·요금제 묻기' },
+      { type: 'phrases', items: [
+        { en: "I'm looking for a phone plan.", ko: '휴대폰 요금제를 찾고 있어요.', note: "'둘러보는 중'이라는 부드러운 표현" },
+        { en: 'Is this plan prepaid or monthly?', ko: '선불인가요, 월 청구인가요?', note: 'prepaid = 선불, 조건은 회사마다 달라요' },
+        { en: 'Does it include unlimited data?', ko: '데이터 무제한이 포함인가요?', note: '속도 제한 조건도 물어보면 좋아요' },
+        { en: 'Can I keep my number?', ko: '번호를 유지할 수 있나요?', note: '한국 번호 유지 가능 여부는 확인 필요' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '은행 직원이 신분증을 요청했어요. 서류를 건네며 할 말을 고르세요.',
+          choices: ['Here you go.', 'How long will it take?', 'Is there a monthly fee?'], answer: '①', lines: 0,
+          sol: { read: '물건을 건네는 상황에서 하는 말을 고르는 문제예요.', idea: '"Here you go."는 무언가를 건네면서 "자, 여기요"라고 할 때 가장 흔히 써요.',
+            steps: ['건네는 행동 → 여기 있다는 말', '②는 소요 시간, ③은 수수료를 묻는 말'], check: '③은 계좌 조건을 물을 때 쓰는 말이라 서류를 줄 때는 어울리지 않아요.',
+            parent: '배우자에게 여권을 건네며 "Here you go."를 연습해 보세요.' } },
+        { label: '연습 2', level: '하', question: '월 수수료 유무를 묻는 문장을 고르세요.',
+          choices: ['Can you spell that, please?', 'Is there a monthly fee?', 'Can I keep my number?'], answer: '②', lines: 0,
+          sol: { read: '수수료(fee)를 묻는 문장을 찾아요.', idea: 'Is there ~?는 "~가 있나요?"라는 기본 틀이에요. fee만 바꾸면 응용돼요.',
+            steps: ['monthly = 매달, fee = 수수료', 'Is there + 알고 싶은 것 → Is there a monthly fee?'],
+            more: 'Is there a late fee?(연체료가 있나요?), Is there a deposit?(보증금이 있나요?)처럼 바꿔 쓸 수 있어요.',
+            parent: '"Is there ~?"로 궁금한 것 하나씩 질문 만들기' } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">I\'d ________ to open a checking account.</span>', lines: 1, answer: 'like',
+          sol: { read: '"~하고 싶어요"를 공손하게 말하는 틀이에요.', idea: "I'd like to ~는 I would like to ~의 줄임말이고, 창구·식당 등 서비스 상황에서 아주 자주 써요.",
+            steps: ["I'd = I would", 'would like to + 동사 → ~하고 싶어요'],
+            mistake: "I want to ~도 틀리진 않지만 직접적으로 들릴 수 있어요. 창구에서는 I'd like to ~가 더 부드러워요." } },
+        { label: '연습 4', level: '중', question: '번호 유지가 되는지 묻는 문장을 완성하세요.<br><span class="en" style="font-size:15px;font-weight:800">Can I ________ my number?</span>', lines: 1, answer: 'keep',
+          sol: { read: '내 번호를 "계속 가지고 있다"는 뜻의 동사를 넣어요.', idea: 'keep = 유지하다. Can I keep ~? = ~를 계속 가져도 되나요?',
+            steps: ['번호 유지 = keep my number', 'Can I + 동사 → 허락·가능 여부 묻기'],
+            check: '해외 번호는 통신사 정책에 따라 달라서 가능 여부는 직원에게 확인하세요.' } }
+      ] },
+      { type: 'card', label: '실전 롤플레이', level: '중', title: '배우자와 은행·통신사 방문 연습', question: '한 사람은 직원, 한 사람은 나를 맡아 앞쪽 대화를 해 보세요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ I\'d like to open an account. □ Here you go. □ Is there a monthly fee? □ Can I keep my number?',
+        answer: '(활동)', sol: { idea: '직원 역할을 해 보면 자주 듣는 질문(Do you have ~? / I need ~)이 귀에 익어서 실제 창구가 덜 떨려요.', steps: ['처음엔 책을 보며', '두 번째부터는 내 대사 가리고', '마지막엔 직원 역이 서류를 하나 더 요구해 보기'], parent: '틀려도 끊지 말고 끝까지 말하기. 못 알아들으면 Could you say that again?' } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '내 상황에 맞게 바꿔 쓰기', level: '상', title: '', question: '내 상황에 맞게 빈칸을 채워 보고, 소리 내어 읽어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">I\'d like to ______________.<br>I have my ______________.<br>Is there a ______________?<br>How long will it take?</span>',
+        answer: "(예) I'd like to open a savings account. I have my passport. Is there a monthly fee?",
+        sol: { idea: '핵심 틀 세 개(I\'d like to / I have / Is there)만 바꿔도 은행, 통신사, 관리사무소에서 그대로 쓸 수 있어요.',
+          steps: ["I'd like to + 하고 싶은 일", 'I have my + 서류 (passport, lease, visa)', 'Is there a + 비용 (fee, deposit)?'],
+          mistake: '필요한 서류나 수수료를 단정해서 말하기보다 먼저 What do I need to bring?으로 물어보는 게 안전해요.',
+          more: '직원이 말이 빠르면 Could you speak a little slower?라고 부탁해도 괜찮아요.' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

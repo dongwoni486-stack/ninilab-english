@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 첫걸음 / Unit 6 Numbers, Time & Days
+const KID = 'Seoah';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '06', unitTitle: 'Numbers, Time & Days', startPage: 44,
+  cover: { title: 'Numbers,<br>Time & Days', subtitle: '숫자·시간·요일·날짜 말하고 알아듣기' },
+  tip: '부모님께: 미국은 날짜를 "월/일" 순서로 써요. 10/17은 10월 17일! 달력을 영어로 함께 읽어 보세요.',
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '시간과 생일 이야기하기' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '교실에서 Emma와 이야기해요.', lines: [
+        { who: KID, me: true, en: 'Excuse me. What time is it?', ko: '저기, 지금 몇 시야?' },
+        { who: 'Emma', en: "It's ten thirty.", ko: '10시 30분이야.' },
+        { who: KID, me: true, en: 'When is lunch?', ko: '점심은 언제야?' },
+        { who: 'Emma', en: "At twelve o'clock.", ko: '12시 정각에.' },
+        { who: 'Emma', en: 'When is your birthday?', ko: '네 생일은 언제야?' },
+        { who: KID, me: true, en: 'My birthday is April 9th.', ko: '내 생일은 4월 9일이야.' },
+        { who: 'Emma', en: 'Cool! Mine is in May.', ko: '멋지다! 내 생일은 5월이야.' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: 'What time is it?', ko: '지금 몇 시예요?', note: '대답: It\'s + 시각' },
+        { en: "It's three o'clock.", ko: '3시 정각이에요.', note: "o'clock = 정각" },
+        { en: 'When is your birthday?', ko: '생일이 언제예요?', note: '대답: My birthday is + 월 일' },
+        { en: 'What day is it today?', ko: '오늘 무슨 요일이야?', note: '대답: It\'s Monday.' } ] },
+      { type: 'tip', pose: 'idea', text: '미국에서는 날짜를 <b>월/일/연도</b> 순서로 써. 10/17은 October 17! 연도가 맨 뒤에 오는 점이 한국과 달라.' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Days', title: '요일과 달 말하기' },
+      { type: 'phrases', items: [
+        { en: 'Monday, Tuesday, Wednesday', ko: '월, 화, 수', note: '요일은 항상 대문자로 시작해요.' },
+        { en: 'Thursday, Friday', ko: '목, 금', note: '학교는 보통 월~금이에요.' },
+        { en: 'Saturday, Sunday', ko: '토, 일', note: 'weekend = 주말' },
+        { en: 'January, February, March', ko: '1월, 2월, 3월', note: '달 이름도 대문자 시작' },
+        { en: 'October, November, December', ko: '10월, 11월, 12월', note: '' },
+        { en: 'My birthday is in May.', ko: '내 생일은 5월이에요.', note: '달 앞에는 in을 써요.' } ] },
+      { type: 'section', tag: 'Numbers', title: '숫자 · 날짜 · 가격 듣기' },
+      { type: 'phrases', items: [
+        { en: 'one, two, three ... ten', ko: '1~10', note: '' },
+        { en: 'thirteen / thirty', ko: '13 / 30', note: '-teen은 끝을 길게, -ty는 앞을 세게' },
+        { en: 'October 17th', ko: '10월 17일', note: '월 → 일 순서로 말해요.' },
+        { en: 'Two dollars and fifty cents.', ko: '2달러 50센트', note: '$2.50 = 가격을 읽는 방법' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '시간을 듣고 알맞은 것을 고르세요.<br>' + big("It's ten thirty."),
+          choices: ['10:30 (10시 30분)', '1:30 (1시 30분)', '10:13 (10시 13분)'], answer: '①', lines: 0,
+          sol: { idea: '시각은 "시 + 분" 순서로 말해요. ten(10) + thirty(30).',
+            steps: ['먼저 시를 들어요: ten = 10시', '다음 분을 들어요: thirty = 30분'],
+            mistake: 'thirteen(13)과 thirty(30)를 헷갈리기 쉬워요. -ty는 앞소리를 강하게 말해요.',
+            parent: 'thirteen과 thirty를 번갈아 말해 주고 어느 쪽인지 맞혀 보게 하세요.' } },
+        { label: '연습 2', level: '하', question: '미국식으로 쓴 날짜 <b>3/9</b>는 언제일까요?',
+          choices: ['9월 3일', '3월 9일', '3월 19일'], answer: '②', lines: 0,
+          sol: { idea: '미국은 월/일 순서예요. 앞 숫자가 달, 뒤 숫자가 일.',
+            steps: ['앞 숫자 3 = 월 → March', '뒤 숫자 9 = 일 → 9th', '→ 3월 9일'],
+            check: '유럽처럼 일/월로 읽으면 9월 3일이 돼요. 나라마다 달라서 헷갈려요.',
+            parent: '내 생일을 월/일 순서로 써 보게 해 주세요.' } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">A: What ________ is it?<br>B: It\'s two o\'clock.</span>', lines: 1, answer: 'time',
+          sol: { idea: '대답이 시각(two o\'clock)이니 질문은 시간을 묻는 What time ~?',
+            steps: ['대답 먼저 보기: 2시 정각', '시각을 묻는 말 = What time is it?'],
+            mistake: '"What day is it?"은 요일을 묻는 말이에요. 시간과 요일을 구분해요.',
+            more: '"What day is it today?" → "It\'s Friday."' } },
+        { label: '연습 4', level: '중', question: '생일을 말하는 문장을 완성하세요.<br><span class="en" style="font-size:15px;font-weight:800">My birthday is ________ May.</span>', lines: 1, answer: 'in',
+          sol: { idea: '달(month) 앞에는 in을 써요. in May, in October.',
+            steps: ['달 이름 앞 = in', '날짜까지 말하면 "May 5th" (in 없이)'],
+            check: '"on May 5th"처럼 날짜 앞에는 on을 쓰기도 해요.',
+            more: '요일 앞에는 on: on Monday.' } }
+      ] },
+      { type: 'card', label: '역할 놀이', level: '중', title: ' 엄마·아빠와 시간 맞히기 놀이', question: '부모님이 시계를 가리키며 "What time is it?"이라고 물어요. 나는 영어로 대답해요. 한 번 맞힐 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ What time is it? □ It\'s ... o\'clock. □ When is your birthday? □ My birthday is ...',
+        answer: '(활동)', sol: { idea: '숫자와 시간은 자주 들으면서 귀가 익어야 해요. 놀이로 반복해요.', steps: ['정각부터 연습', '30분 말하기', '요일·생일 질문으로 확장'], parent: '틀려도 "Good try!"라고 말해 주세요.' } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '빈칸을 채워 나에 대한 문장을 완성하고, 소리 내어 읽어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">My birthday is ______________.<br>Today is ______________.<br>I have lunch at ______________.</span>',
+        answer: `(예) My birthday is April 9th. Today is Friday. I have lunch at twelve o'clock.`,
+        sol: { idea: '생일 → 오늘 요일 → 일과 시간을 말하는 연습이에요.',
+          steps: ['My birthday is + 월 일', 'Today is + 요일', 'at + 시각'],
+          mistake: '월/일 순서를 거꾸로 쓰기 쉬워요. 달 이름을 먼저 말해요.',
+          more: '시각 앞에는 at, 달 앞에는 in, 요일 앞에는 on을 써요.' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

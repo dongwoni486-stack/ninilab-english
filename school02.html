@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 생존 회화 / Unit 2 In the Classroom
+const KID = 'Seoah';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '02', unitTitle: 'In the Classroom', startPage: 12,
+  cover: { title: 'In the<br>Classroom', subtitle: '자리·준비물 빌리기, 질문하기, 차례 기다리기, 교실 당번까지 · Unit 2' },
+  tip: "부모님께: 'Can I ~?' 한 가지 틀만 확실히 익혀도 교실에서 할 수 있는 말이 확 늘어요. 집에서 물건을 건네 주며 Can I ~?로 부탁하는 놀이를 해 보세요.",
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '연필이 없어요! 빌려 달라고 말하기' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '수업 시작 직전. 서아가 연필을 안 가져온 걸 알았어요.', lines: [
+        { who: 'Emma', en: 'Time for math! Take out your pencil.', ko: '수학 시간이야! 연필 꺼내.' },
+        { who: KID, me: true, en: "Oh no. I don't have a pencil.", ko: '어떡해. 나 연필이 없어.' },
+        { who: 'Emma', en: 'No problem. I have an extra one.', ko: '괜찮아. 나 여분이 하나 있어.' },
+        { who: KID, me: true, en: 'Can I borrow it, please?', ko: '그거 빌려도 돼?' },
+        { who: 'Emma', en: 'Sure! Here you go.', ko: '그럼! 여기 있어.' },
+        { who: KID, me: true, en: 'Thank you! I\'ll give it back.', ko: '고마워! 꼭 돌려줄게.' },
+        { who: 'Emma', en: 'You\'re welcome.', ko: '천만에.' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: "I don't have a pencil.", ko: '나 연필이 없어요.', note: '없는 물건 이름만 바꾸면 돼요.' },
+        { en: 'Can I borrow your eraser?', ko: '지우개 빌려도 돼?', note: 'borrow = 빌리다. 쓰고 돌려줄 때' },
+        { en: 'Here you go.', ko: '여기 있어.', note: '물건을 건네며 하는 자연스러운 말' },
+        { en: 'I will give it back.', ko: '다시 돌려줄게.', note: '빌릴 때 덧붙이면 예의 바르게 들려요.' } ] },
+      { type: 'tip', pose: 'idea', text: '미국 교실에는 공용 연필 통이 있거나 선생님이 여분을 빌려 주는 경우가 많아. 먼저 <b>Can I borrow a pencil?</b>이라고 물어보면 돼!' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Ask', title: '선생님께 질문하고 도움 받기' },
+      { type: 'phrases', items: [
+        { en: 'Excuse me, Ms. Brown.', ko: '선생님, 저기요.', note: '말을 걸기 전에 먼저 부르는 말' },
+        { en: 'I have a question.', ko: '질문이 있어요.', note: '손을 들고 말해요.' },
+        { en: "I don't know what to do.", ko: '뭘 해야 할지 모르겠어요.', note: '활동 방법을 놓쳤을 때' },
+        { en: 'Can you help me, please?', ko: '도와주실 수 있어요?', note: 'please를 붙이면 더 공손해요.' },
+        { en: 'What page are we on?', ko: '우리 몇 쪽이에요?', note: '교과서를 따라가다 놓쳤을 때' },
+        { en: 'Can I sit here?', ko: '여기 앉아도 돼?', note: '빈자리를 가리키며 친구에게' } ] },
+      { type: 'section', tag: 'Rules', title: '차례, 숙제, 교실 당번' },
+      { type: 'phrases', items: [
+        { en: 'Wait your turn.', ko: '네 차례를 기다려.', note: '줄·발표·놀이 모두 순서가 중요해요.' },
+        { en: "It's my turn.", ko: '내 차례야.', note: '공손하게 말하면 싸움이 안 생겨요.' },
+        { en: 'Put your homework in your folder.', ko: '숙제는 폴더에 넣으세요.', note: '숙제 폴더를 쓰는 학교가 많아요.' },
+        { en: "I'm the line leader today.", ko: '오늘은 내가 줄 대장이야.', note: '교실 당번(job)은 돌아가며 맡아요.' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '친구의 지우개를 빌리고 싶어요. 뭐라고 말할까요?',
+          choices: ['Can I borrow your eraser?', 'Here you go.', 'Wait your turn.'], answer: '①', lines: 0,
+          sol: { idea: '"Can I ~?"는 허락을 구하는 틀이에요. borrow(빌리다)를 넣으면 "빌려도 돼?"가 돼요.',
+            steps: ['하고 싶은 일: 지우개 빌리기 = borrow your eraser', '틀에 넣기: Can I + borrow your eraser + ?'],
+            check: "'Here you go.'는 물건을 줄 때 하는 말이라 빌리는 사람이 할 말이 아니에요.",
+            parent: "연필, 가위, 풀 등 물건 이름을 바꿔 'Can I borrow ~?'를 말해 보게 해 주세요." } },
+        { label: '연습 2', level: '하', question: '활동 방법을 몰라서 선생님께 도움을 청해요. 알맞은 말은?',
+          choices: ["It's my turn.", 'Can you help me, please?', "I'm the line leader."], answer: '②', lines: 0,
+          sol: { idea: 'help me = 나를 도와주다. "Can you ~?"는 상대에게 부탁하는 틀이에요.',
+            steps: ['도움이 필요 → help', '선생님께 부탁 → Can you help me, please?'],
+            more: "허락은 'Can I ~?', 부탁은 'Can you ~?'. I는 나, you는 상대가 할 일이에요." } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Can I ________ your glue stick?</span><br><span style="font-size:12px">(뜻: 네 딱풀 빌려도 돼?)</span>', lines: 1, answer: 'borrow',
+          sol: { idea: '돌려줄 물건을 잠깐 쓸 때는 borrow(빌리다)를 써요.',
+            steps: ['"빌려도 돼?" → Can I borrow ~?', 'glue stick은 뒤에 물건 이름으로 오기'],
+            mistake: "'lend'는 '빌려주다'라서 반대 뜻이에요. 내가 빌릴 때는 borrow예요." } },
+        { label: '연습 4', level: '중', question: '친구가 먼저 줄을 서 있어요. 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Please wait your ________.</span>', lines: 1, answer: 'turn',
+          sol: { idea: 'turn은 "차례"예요. 순서를 기다리라고 할 때 wait your turn이라고 해요.',
+            steps: ['차례 = turn', 'wait your turn = 네 차례를 기다리다'],
+            check: "내 차례라고 말할 때는 'It's my turn.'. 같은 단어 turn을 써요.",
+            more: "'Your turn!'만 말해도 '네 차례야!'라는 뜻이에요." } }
+      ] },
+      { type: 'card', label: '역할 놀이', level: '중', title: '엄마·아빠와 교실 놀이', question: '부모님이 Emma와 Ms. Brown을 맡고 나는 나 자신을 맡아요. 연필 빌리기와 질문하기를 해 본 뒤 ○에 색칠하세요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ Can I borrow ~? □ I have a question. □ Can you help me, please? □ Thank you!',
+        answer: '(활동)', sol: { idea: '실제 상황처럼 물건을 주고받으며 말하면 표현이 몸에 붙어요.', steps: ['처음엔 책을 보며', '두 번째부터는 물건을 직접 건네며', '마지막엔 물건 이름을 바꿔서'], parent: "틀려도 고치지 말고 'Good try!'로 끝까지 말하게 해 주세요." } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '빌리고 싶은 물건을 넣어 나만의 문장을 만들어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">Can I borrow your ______________?<br>I don\'t have a ______________.<br>I will give it ______________.</span>',
+        answer: "(예) Can I borrow your scissors? I don't have a ruler. I will give it back.",
+        sol: { idea: '빈칸 하나만 바꿔도 새 문장이 돼요. 물건 이름 단어만 늘리면 표현이 쑥쑥 커져요.',
+          steps: ['Can I borrow your + 물건(pencil, ruler, crayon …)', "I don't have a + 물건", 'I will give it back (돌려줄게요)'],
+          mistake: "'give it back'은 세 단어를 한 덩어리로 외워요. 'give back it'이라고 하지 않아요.",
+          more: '다음 유닛에서는 화장실·물·아플 때 쓰는 표현을 배워요.' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

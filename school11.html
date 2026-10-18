@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 생존 회화 / Unit 11 Asking for Help (도움 요청 총정리)
+const KID = 'Seoah';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '11', unitTitle: 'Asking for Help', startPage: 84,
+  cover: { title: 'Can You<br>Help Me?', subtitle: '길을 잃어도, 물건을 잃어도 괜찮아요 · 도움 요청 총정리' },
+  tip: '부모님께: "도움 요청"은 가장 중요한 생존 기술이에요. 모르는 게 생기면 먼저 말을 꺼내 보게 해 주세요. 도움을 받으면 꼭 "Thank you!"로 마무리!',
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '물건을 잃어버렸어요' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '점심 후 복도. 도서관 책을 찾지 못해 선생님께 말해요.', lines: [
+        { who: KID, me: true, en: 'Excuse me, Ms. Brown. I need help.', ko: '선생님, 도움이 필요해요.' },
+        { who: 'Ms. Brown', en: 'Sure. What happened?', ko: '그래. 무슨 일이니?' },
+        { who: KID, me: true, en: 'I lost my library book.', ko: '도서관 책을 잃어버렸어요.' },
+        { who: 'Ms. Brown', en: 'Where did you see it last?', ko: '마지막으로 어디서 봤니?' },
+        { who: KID, me: true, en: 'I think in the cafeteria.', ko: '급식실에서인 것 같아요.' },
+        { who: 'Ms. Brown', en: 'Let\'s check the lost and found.', ko: '분실물 보관함을 확인해 보자.' },
+        { who: KID, me: true, en: 'Where is it?', ko: '그게 어디에 있어요?' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: 'I lost my book.', ko: '책을 잃어버렸어요.', note: 'lost = lose(잃어버리다)의 과거형' },
+        { en: "I can't find my pencil.", ko: '연필을 못 찾겠어요.', note: '잃어버렸는지 모를 때 편해요.' },
+        { en: 'Where is the lost and found?', ko: '분실물 보관함이 어디예요?', note: '학교마다 이름과 위치가 달라요.' },
+        { en: 'Thank you for helping me.', ko: '도와줘서 고마워요.', note: '도움을 받은 뒤 마무리 인사' } ] },
+      { type: 'tip', pose: 'idea', text: '미국 학교엔 <b>lost and found(분실물 보관함)</b>가 있는 경우가 많아. 물건엔 이름을 꼭 써 두자!' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Ask', title: '도움 요청 · 길 묻기' },
+      { type: 'phrases', items: [
+        { en: 'Can you help me, please?', ko: '저 좀 도와줄래요?', note: 'Can you ~? = 부탁하기 틀' },
+        { en: 'Can you show me?', ko: '보여 줄 수 있어요?', note: '직접 보여 달라고 할 때' },
+        { en: 'Where is the library?', ko: '도서관이 어디예요?', note: 'Where is the + 장소?' },
+        { en: "I can't find my classroom.", ko: '내 교실을 못 찾겠어요.', note: '길을 잃었을 때 바로 말해요.' },
+        { en: 'Which way is the gym?', ko: '체육관은 어느 쪽이에요?', note: '방향을 물을 때' },
+        { en: 'Can you walk with me?', ko: '같이 가 줄래요?', note: '' } ] },
+      { type: 'section', tag: 'Listen', title: '길 안내 알아듣기' },
+      { type: 'phrases', items: [
+        { en: 'Go straight.', ko: '곧장 가세요.', note: '' },
+        { en: 'Turn left.', ko: '왼쪽으로 도세요.', note: 'right = 오른쪽' },
+        { en: "It's next to the office.", ko: '사무실 옆이에요.', note: 'next to = ~ 옆에' },
+        { en: "I'll show you.", ko: '내가 알려 줄게요.', note: '' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '교실을 못 찾겠어요. 뭐라고 말할까요?',
+          choices: ["I can't find my classroom.", 'Turn left.', 'Nice to meet you.'], answer: '①', lines: 0,
+          sol: { idea: "can't find = 찾을 수 없다. 길을 잃었을 때는 못 찾는 물건·장소를 뒤에 붙여요.",
+            steps: ["찾는 것: my classroom", "I can't find + 찾는 것"],
+            mistake: 'Turn left.는 길을 안내하는 말이라 묻는 사람이 쓰는 말이 아니에요.',
+            parent: '"I can\'t find my ___"에 다른 물건을 넣어 보게 해 주세요.' } },
+        { label: '연습 2', level: '하', question: '도서관 위치를 물어보는 문장은?',
+          choices: ['Where is the library?', 'I lost my library.', 'Go straight.'], answer: '①', lines: 0,
+          sol: { idea: 'Where is the ~? = ~가 어디예요? 장소를 물을 때 가장 기본 틀이에요.',
+            steps: ['where = 어디', 'the + 장소 이름을 붙이기'],
+            more: 'Where is the bathroom? / Where is the gym? 도 같은 틀이에요.' } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br>' + big('I ________ my jacket. (잃어버렸어요)'), lines: 1, answer: 'lost',
+          sol: { idea: '이미 잃어버린 일은 과거형 lost를 써요.',
+            steps: ['lose(잃어버리다)의 과거형 = lost', 'I lost my + 물건'],
+            mistake: 'I lose my jacket.은 "(지금) 잃어버리다"처럼 들려 어색해요.' } },
+        { label: '연습 4', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br>' + big('Can you ________ me the way?'), lines: 1, answer: 'show',
+          sol: { idea: 'show me = 나에게 보여 주다. 길을 알려 달라고 할 때 자주 써요.',
+            steps: ['Can you + 동사 + me ...?', '보여 주다 = show'],
+            more: 'Can you show me how? (어떻게 하는지 보여 줄래요?)도 많이 써요.' } }
+      ] },
+      { type: 'card', label: '역할 놀이', level: '중', title: ' 엄마·아빠와 도움 요청하기', question: '부모님이 선생님 역할을 해요. 내가 물건을 잃어버린 상황으로 앞 쪽 대화를 해 보세요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ I need help. □ I lost my ___. □ Where is ___? □ Thank you!',
+        answer: '(활동)', sol: { idea: '실제 상황에서는 먼저 말을 꺼내는 것이 가장 어려워요. 집에서 여러 번 해 보면 훨씬 쉬워져요.', steps: ['먼저 I need help.로 시작', '무슨 일인지 말하기', '마지막에 Thank you!'], parent: '틀려도 고치지 말고 끝까지 말하면 칭찬해 주세요.' } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '빈칸을 채워 나만의 도움 요청 문장을 만들어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">I can\'t find my ______________.<br>Where is the ______________?<br>Can you ______________ me?</span>',
+        answer: `(예) I can't find my water bottle. Where is the nurse's office? Can you show me?`,
+        sol: { idea: '세 틀(I can\'t find / Where is / Can you)만 알면 대부분의 도움 요청을 할 수 있어요.',
+          steps: ["I can't find my + 물건", 'Where is the + 장소', 'Can you + 동사 + me'],
+          mistake: 'Where is 뒤에는 the를 붙여요. "Where is library?"는 어색해요.',
+          more: '도움을 받으면 Thank you for helping me.로 마무리해요.' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

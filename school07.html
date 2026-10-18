@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 첫걸음 / Unit 7 School Bus & Getting Home
+const KID = 'Seoah';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '07', unitTitle: 'School Bus & Getting Home', startPage: 52,
+  cover: { title: 'School Bus &<br>Getting Home', subtitle: '스쿨버스·하교·길 잃었을 때 말하기' },
+  tip: '부모님께: 하교 방법(버스·car line 등)은 학교마다 달라요. 입학 후 학교 안내문을 꼭 확인하고, 아이와 우리 집 주소와 전화번호를 영어로 연습해 두세요.',
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '스쿨버스 · 하교 때 말하기' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '수업이 끝났어요. 선생님이 하교 방법을 확인해요.', lines: [
+        { who: 'Ms. Brown', en: `${KID}, how do you go home?`, ko: `${KID}, 집에 어떻게 가니?` },
+        { who: KID, me: true, en: 'I take the bus.', ko: '버스를 타요.' },
+        { who: 'Ms. Brown', en: 'What is your bus number?', ko: '버스 번호가 뭐니?' },
+        { who: KID, me: true, en: 'My bus number is 12.', ko: '제 버스 번호는 12번이에요.' },
+        { who: 'Ms. Brown', en: 'Great. Where is your bus stop?', ko: '좋아. 정류장은 어디니?' },
+        { who: KID, me: true, en: 'It is near my house.', ko: '우리 집 근처예요.' },
+        { who: 'Ms. Brown', en: 'Okay. See you tomorrow!', ko: '그래. 내일 보자!' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: 'I take the bus.', ko: '버스를 타요.', note: 'take = (교통수단을) 타다' },
+        { en: 'My bus number is 12.', ko: '제 버스 번호는 12번이에요.', note: '숫자는 정확히 말해요.' },
+        { en: 'Where is my bus?', ko: '내 버스는 어디예요?', note: '버스를 못 찾을 때' },
+        { en: 'My mom picks me up.', ko: '엄마가 데리러 와요.', note: 'pick up = 데리러 오다' } ] },
+      { type: 'tip', pose: 'idea', text: '미국 초등학교는 <b>car line</b>(차로 데리러 오는 줄)이나 스쿨버스로 하교하는 경우가 많아. 매일 어떻게 가는지 선생님이 확인하는 학교가 많아!' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Pick-up', title: '누가 데리러 오는지 말하기' },
+      { type: 'phrases', items: [
+        { en: 'My dad picks me up.', ko: '아빠가 데리러 와요.', note: '엄마는 My mom, 부모님은 My parents' },
+        { en: "I'm in the car line.", ko: '저는 car line에서 기다려요.', note: '차로 데리러 올 때' },
+        { en: 'I take the bus home.', ko: '버스로 집에 가요.', note: '' },
+        { en: 'I go to after-school.', ko: '방과후 수업에 가요.', note: 'after-school = 방과후 돌봄' },
+        { en: "I'm waiting for my mom.", ko: '엄마를 기다리고 있어요.', note: '' },
+        { en: 'See you tomorrow!', ko: '내일 봐요!', note: '하교 인사' } ] },
+      { type: 'section', tag: 'Help', title: '길을 잃었을 때' },
+      { type: 'phrases', items: [
+        { en: "I'm lost.", ko: '길을 잃었어요.', note: '어른에게 바로 말해요.' },
+        { en: "I can't find my bus.", ko: '내 버스를 못 찾겠어요.', note: '' },
+        { en: 'Can you help me, please?', ko: '도와주실 수 있나요?', note: '선생님이나 직원에게' },
+        { en: 'I need my mom.', ko: '엄마가 필요해요.', note: '전화번호도 말할 수 있게 연습해요.' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '아빠가 데리러 와요. 알맞은 문장을 고르세요.',
+          choices: ['My dad picks me up.', 'I take the bus.', "I'm lost."], answer: '①', lines: 0,
+          sol: { idea: 'pick up = 데리러 오다. 누가 오는지 주어를 바꿔요.',
+            steps: ['데리러 오는 사람: 아빠 = My dad', '동작: pick up → picks me up'],
+            mistake: '버스는 take, 사람이 데리러 오는 건 pick up으로 구분해요.',
+            parent: '"엄마가 데리러 오면?"하며 My mom으로 바꿔 말하게 해 보세요.' } },
+        { label: '연습 2', level: '하', question: '길을 잃었어요. 어른에게 뭐라고 말할까요?',
+          choices: ['See you tomorrow!', "I'm lost. Can you help me?", 'I take the bus.'], answer: '②', lines: 0,
+          sol: { idea: '길을 잃으면 먼저 상황(I\'m lost)을 말하고, 도움을 부탁해요.',
+            steps: ["상황: I'm lost.", 'Can you help me?로 도움 요청'],
+            check: '①은 작별 인사, ③은 평소 하교 방법이라 어울리지 않아요.',
+            parent: '선생님이나 경찰 같은 믿을 만한 어른에게 말한다고 알려 주세요.' } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">I ________ the bus home.</span>', lines: 1, answer: 'take',
+          sol: { idea: '버스·기차 같은 교통수단은 take(타다)를 써요.',
+            steps: ['교통수단을 탄다 = take', 'I take the bus.'],
+            mistake: '"I ride the bus"도 가능하지만 우선 take로 익혀요.',
+            more: 'I take the subway. I take a taxi.' } },
+        { label: '연습 4', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">My mom ________ me up.</span>', lines: 1, answer: 'picks',
+          sol: { idea: '엄마(3인칭 한 사람)가 주어면 동사 끝에 -s를 붙여요.',
+            steps: ['주어: My mom (한 사람)', 'pick → picks'],
+            check: '"I pick up"일 때는 -s가 없어요.',
+            more: 'My dad picks me up. 도 같아요.' } }
+      ] },
+      { type: 'card', label: '역할 놀이', level: '중', title: ' 엄마·아빠와 하교 연습', question: '부모님이 Ms. Brown을, 나는 나 자신을 맡아 앞 쪽의 대화를 해 보세요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ I take the bus. □ My bus number is ... □ My mom picks me up. □ I\'m lost.',
+        answer: '(활동)', sol: { idea: '실제 상황에서 바로 말할 수 있도록 입에 붙이는 연습이에요.', steps: ['버스 번호 말하기', '누가 데리러 오는지 말하기', "길을 잃은 상황 말하기"], parent: '집 주소와 부모님 전화번호도 영어 숫자로 말해 보게 해 주세요.' } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '빈칸을 채워 나의 하교 방법을 완성하고, 소리 내어 읽어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">I go home by ______________.<br>My bus number is ______________.<br>My ______________ picks me up.</span>',
+        answer: `(예) I go home by bus. My bus number is 12. My mom picks me up.`,
+        sol: { idea: '하교 방법 → 버스 번호 → 데리러 오는 사람 순서로 말해 보는 연습이에요.',
+          steps: ['I go home by + 교통수단', 'My bus number is + 숫자', 'My + 가족 + picks me up'],
+          mistake: '버스를 탈 때는 picks me up을 쓰지 않아요. 둘 중 하나만 골라 말해도 돼요.',
+          more: '실제 하교 방법은 학교 안내문에 따라 달라요.' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

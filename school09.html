@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 첫걸음 / Unit 09 Birthday Party & Playdate
+const KID = 'Seoah';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '09', unitTitle: 'Birthday Party & Playdate', startPage: 68,
+  cover: { title: 'Birthday Party<br>& Playdate', subtitle: '생일파티 초대와 친구 집 방문 회화' },
+  tip: '부모님께: 미국 생일파티 초대장에는 보통 RSVP(참석 여부 알려 주기) 요청이 있어요. 보호자끼리 연락하는 경우가 많으니 초대장을 확인해 주세요.',
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '생일파티 초대 받기' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '쉬는 시간. Emma가 초대장을 건네요.', lines: [
+        { who: 'Emma', en: `${KID}, I'm having a birthday party on Saturday!`, ko: `${KID}, 나 토요일에 생일파티 해!` },
+        { who: 'Emma', en: 'Can you come?', ko: '올 수 있어?' },
+        { who: KID, me: true, en: 'Yes! I would love to come.', ko: '응! 꼭 가고 싶어.' },
+        { who: KID, me: true, en: 'I will ask my mom.', ko: '엄마한테 물어볼게.' },
+        { who: 'Emma', en: 'Great! The party is at my house.', ko: '좋아! 파티는 우리 집에서 해.' },
+        { who: KID, me: true, en: 'Happy birthday, Emma! This is for you.', ko: '생일 축하해, Emma! 이거 널 위한 거야.' },
+        { who: 'Emma', en: 'Thank you so much! I love it!', ko: '정말 고마워! 너무 좋아!' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: 'Can you come?', ko: '올 수 있어?', note: '초대할 때 가장 흔한 말' },
+        { en: 'I would love to come.', ko: '꼭 가고 싶어.', note: '수락할 때. "I\'d love to."로 줄여요.' },
+        { en: "Sorry, I can't come.", ko: '미안, 못 가.', note: '거절할 때도 Sorry로 시작하면 부드러워요.' },
+        { en: 'Happy birthday!', ko: '생일 축하해!', note: '선물을 줄 때 같이 말해요.' } ] },
+      { type: 'tip', pose: 'idea', text: '미국에서는 선물을 받으면 <b>바로 열어 보고</b> 고맙다고 말하는 경우가 많아. 집마다 다를 수 있어!' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Reply', title: '초대에 답하기 (RSVP)' },
+      { type: 'phrases', items: [
+        { en: 'Thank you for inviting me.', ko: '초대해 줘서 고마워.', note: '' },
+        { en: 'What time does it start?', ko: '몇 시에 시작해?', note: '' },
+        { en: 'I will ask my mom and dad.', ko: '엄마 아빠한테 물어볼게.', note: '바로 답 못 할 때' },
+        { en: 'I will let you know tomorrow.', ko: '내일 알려 줄게.', note: '' },
+        { en: "Sorry, I have other plans.", ko: '미안, 다른 약속이 있어.', note: '' },
+        { en: 'Thanks for having me!', ko: '불러 줘서 고마워!', note: '파티가 끝날 때' } ] },
+      { type: 'section', tag: 'Playdate', title: '친구 집에 놀러 가서' },
+      { type: 'phrases', items: [
+        { en: 'Do you want to come over?', ko: '우리 집에 놀러 올래?', note: '약속 잡을 때. 부모님 허락 필요!' },
+        { en: 'Can I use the bathroom?', ko: '화장실 써도 돼요?', note: '남의 집에선 꼭 물어봐요.' },
+        { en: 'Thank you for having me.', ko: '초대해 주셔서 감사해요.', note: '친구 부모님께 말해요.' },
+        { en: 'I had fun!', ko: '재밌었어요!', note: '' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '친구가 생일파티에 초대했어요. 가고 싶을 때 뭐라고 할까요?<br>' + big('Can you come?'),
+          choices: ["Sorry, I can't.", 'I would love to come.', 'Happy birthday!'], answer: '②', lines: 0,
+          sol: { idea: '질문은 "올 수 있어?"예요. 가고 싶다는 대답을 찾아요.',
+            steps: ["Sorry, I can't. = 못 가요", 'Happy birthday! = 축하 인사', 'I would love to come. = 꼭 가고 싶어요'],
+            mistake: 'Happy birthday!는 파티 당일 인사라서, 초대에 대한 대답은 아니에요.',
+            parent: '"Can you come?"이라고 물어보고 아이가 대답하게 해 주세요.' } },
+        { label: '연습 2', level: '하', question: '친구 집에서 놀다 화장실에 가고 싶어요. 뭐라고 할까요?',
+          choices: ['Can I use the bathroom?', 'I had fun!', 'Thanks for having me!'], answer: '①', lines: 0,
+          sol: { idea: '"Can I ~?"로 허락을 구해요. 친구 집에서는 특히 중요해요.',
+            steps: ['하고 싶은 것: use the bathroom', 'Can I + 하고 싶은 것 + ?'],
+            more: '"Can I have some water?(물 좀 마셔도 돼요?)"도 같은 틀이에요.',
+            parent: '남의 집에서 먼저 물어보는 습관을 한국어로도 이야기해 보세요.' } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '선물을 주면서 빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Happy ________, Emma! This is for you.</span>', lines: 1, answer: 'birthday',
+          sol: { idea: '선물을 줄 때는 인사와 함께 "This is for you."를 붙여요.',
+            steps: ['생일 = birthday', 'Happy + 기념일 = 축하 인사'],
+            check: '새해는 Happy New Year!처럼 날마다 인사가 달라요.',
+            mistake: 'birthday의 철자 th를 조심해요.' } },
+        { label: '연습 4', level: '중', question: '파티가 끝났어요. 친구 부모님께 인사하는 문장을 완성하세요.<br><span class="en" style="font-size:15px;font-weight:800">Thank you for ________ me.</span>', lines: 1, answer: 'having',
+          sol: { idea: '"Thank you for ~ing"는 "~해 줘서 고마워요"라는 틀이에요.',
+            steps: ['have me = 나를 손님으로 맞이하다', 'for 뒤에는 -ing → having'],
+            mistake: '"for have"가 아니라 for 뒤에는 -ing 형태로 써요.',
+            more: '"Thank you for inviting me."도 같은 틀이에요.' } }
+      ] },
+      { type: 'card', label: '역할 놀이', level: '중', title: '엄마·아빠와 파티 초대 연습', question: '부모님이 친구가 되어 초대해요. 나는 수락 또는 거절로 대답해요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ I would love to come. □ Sorry, I can\'t come. □ Happy birthday! □ Thank you for having me.',
+        answer: '(활동)', sol: { idea: '초대에는 수락, 거절, "물어볼게" 세 가지 답이 있어요. 모두 연습하면 어떤 상황도 괜찮아요.', steps: ['먼저 수락으로 연습', '다음엔 거절 (Sorry로 시작)', '마지막은 "I will ask my mom."'], parent: '거절 연습도 꼭 해 주세요. 거절해도 괜찮다는 걸 알려 주세요.' } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '빈칸을 채워 초대 답장을 완성하고 소리 내어 읽어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">Thank you for inviting me!<br>I would love to come on ______________.<br>What time does it ______________?<br>Happy ______________!</span>',
+        answer: '(예) I would love to come on Saturday. What time does it start? Happy birthday!',
+        sol: { idea: '답장은 고마움 → 참석 의사 → 궁금한 점 → 축하 순서가 자연스러워요.',
+          steps: ['Thank you for inviting me!로 시작', 'on + 요일', 'What time does it start?', 'Happy birthday!로 마무리'],
+          mistake: 'on Saturday처럼 요일 앞에는 on을 써요.',
+          more: '다음 유닛에서는 기분과 감정을 말하는 법을 배워요.' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

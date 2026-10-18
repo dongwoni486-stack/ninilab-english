@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 첫걸음 / Unit 5 Recess & Making Friends
+const KID = 'Seoah';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '05', unitTitle: 'Recess & Making Friends', startPage: 36,
+  cover: { title: 'Recess &<br>Making Friends', subtitle: '쉬는 시간에 친구에게 말 걸고 같이 놀기' },
+  tip: '부모님께: 쉬는 시간은 친구를 사귀는 가장 큰 기회예요. "Can I play too?" 한 문장만 입에 붙어도 큰 도움이 돼요.',
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '운동장에서 같이 놀자고 말하기' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '쉬는 시간(recess). 운동장에서 Emma가 공놀이를 하고 있어요.', lines: [
+        { who: KID, me: true, en: 'Hi! Can I play too?', ko: '안녕! 나도 같이 놀아도 돼?' },
+        { who: 'Emma', en: 'Sure! What is your name?', ko: '물론이지! 이름이 뭐야?' },
+        { who: KID, me: true, en: `My name is ${KID}.`, ko: `내 이름은 ${KID}야.` },
+        { who: 'Emma', en: "I'm Emma. We're playing tag.", ko: '나는 Emma야. 우리는 술래잡기 중이야.' },
+        { who: KID, me: true, en: 'How do you play?', ko: '어떻게 하는 거야?' },
+        { who: 'Emma', en: "If I tap you, you're it!", ko: '내가 널 치면 네가 술래야!' },
+        { who: KID, me: true, en: 'Okay! Let\'s play.', ko: '알겠어! 같이 놀자.' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: 'Can I play too?', ko: '나도 같이 놀아도 돼?', note: 'Can I ~? = 허락 구하기' },
+        { en: 'What is your name?', ko: '이름이 뭐야?', note: '"What\'s your name?"도 많이 써요.' },
+        { en: 'How do you play?', ko: '어떻게 하는 거야?', note: '놀이 규칙을 물을 때' },
+        { en: "Let's play!", ko: '같이 놀자!', note: "Let's = 우리 ~하자" } ] },
+      { type: 'tip', pose: 'idea', text: '미국 초등학교는 쉬는 시간에 운동장에서 노는 경우가 많아. 먼저 <b>웃으며 한마디</b> 건네면 반갑게 받아 주는 친구가 많아!' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Game', title: '놀이 중에 쓰는 말' },
+      { type: 'phrases', items: [
+        { en: "It's my turn.", ko: '내 차례야.', note: 'turn = 차례. 순서를 지킬 때' },
+        { en: "It's your turn.", ko: '네 차례야.', note: '양보할 때도 써요.' },
+        { en: 'Can I have a turn?', ko: '나도 한 번 해도 돼?', note: '그네·공 등 기다릴 때' },
+        { en: 'What are the rules?', ko: '규칙이 뭐야?', note: '처음 하는 놀이에서' },
+        { en: "That's not fair.", ko: '그건 공평하지 않아.', note: '화내지 말고 차분히 말해요.' },
+        { en: 'Good job!', ko: '잘했어!', note: '친구를 칭찬할 때' } ] },
+      { type: 'section', tag: 'Reply', title: '같이 놀자 대답하기 (수락 · 거절)' },
+      { type: 'phrases', items: [
+        { en: 'Sure! Come on.', ko: '그럼! 어서 와.', note: '수락할 때' },
+        { en: 'Yeah, you can play.', ko: '응, 같이 해도 돼.', note: '수락할 때' },
+        { en: "Sorry, we're full.", ko: '미안, 자리가 다 찼어.', note: '거절은 이유를 붙이는 경우가 많아요.' },
+        { en: 'Maybe next time.', ko: '다음에 하자.', note: '거절 뒤 상냥한 한마디' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '그네를 타고 싶어요. 친구에게 뭐라고 말할까요?',
+          choices: ["It's your turn.", 'Can I have a turn?', 'Good job!'], answer: '②', lines: 0,
+          sol: { idea: '"Can I ~?"는 허락을 구하는 틀이에요. turn(차례)을 넣으면 "나도 차례 줄래?"가 돼요.',
+            steps: ['하고 싶은 것: 내 차례를 갖는 것 = have a turn', 'Can I + have a turn + ?'],
+            mistake: "It's your turn.은 상대에게 차례를 주는 말이에요. 반대로 쓰지 않게 조심!",
+            parent: '"공을 빌리고 싶을 땐?" 하며 Can I have ~?를 응용해 보세요.' } },
+        { label: '연습 2', level: '하', question: '친구가 이렇게 말했어요. 무슨 뜻일까요?<br>' + big("Sorry, we're full. Maybe next time."),
+          choices: ['😊 같이 놀자', '🙅 지금은 안 돼, 다음에 하자', '👏 잘했어'], answer: '②', lines: 0,
+          sol: { idea: 'Sorry로 시작하면 부드러운 거절이에요. full은 "가득 찬", next time은 "다음 번".',
+            steps: ["Sorry = 미안해", "we're full = 자리가 다 찼어", "Maybe next time = 다음에 하자"],
+            check: '뒤에 Maybe next time이 있어서 완전한 "싫어"가 아니라 "다음에"라는 뜻이에요.',
+            parent: '거절당해도 "Okay!" 하고 다른 친구에게 가 보는 연습을 해 보세요.' } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Hi! Can I ________ too?</span>', lines: 1, answer: 'play',
+          sol: { idea: 'Can I 뒤에는 하고 싶은 행동(동사)이 와요. 같이 놀고 싶으니 play.',
+            steps: ['Can I + 동사', '놀다 = play', '→ Can I play too?'],
+            mistake: '"Can I playing?"처럼 -ing를 붙이지 않아요. 동사는 그대로!',
+            more: 'Can I sit here? / Can I join you? 도 같은 틀이에요.' } },
+        { label: '연습 4', level: '중', question: '친구 이름을 물어보는 문장을 완성하세요.<br><span class="en" style="font-size:15px;font-weight:800">What is your ________?</span>', lines: 1, answer: 'name',
+          sol: { idea: '"무엇이 네 ~이니?"에서 ~ 자리에 name(이름)을 넣어요.',
+            steps: ['What is your + 알고 싶은 것', '이름 = name'],
+            check: '대답은 "My name is ~." 또는 "I\'m ~."이에요.',
+            more: '나이는 "How old are you?"로 물어요.' } }
+      ] },
+      { type: 'card', label: '역할 놀이', level: '중', title: ' 엄마·아빠와 운동장 놀이', question: '부모님이 Emma를, 나는 나 자신을 맡아 앞 쪽의 대화를 해 보세요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ Can I play too? □ How do you play? □ It\'s my turn. □ Maybe next time.',
+        answer: '(활동)', sol: { idea: '놀이 중 대화는 짧고 빨라요. 반복해서 입에 붙이는 연습이 중요해요.', steps: ['처음엔 책을 보며', '두 번째부터는 내 대사를 가리고', '마지막엔 부모님이 거절 역할로 바꿔 보기'], parent: '틀려도 "Good try!"로 끝까지 말하게 해 주세요.' } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '빈칸을 채워 친구에게 말 거는 문장을 완성하고, 소리 내어 읽어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">Hi! My name is ______________.<br>Can I play ______________ too?<br>I like ______________.</span>',
+        answer: `(예) Hi! My name is ${KID}. Can I play tag too? I like swings.`,
+        sol: { idea: '이름 → 같이 놀기 요청 → 좋아하는 것 순서로 말하면 자연스러워요.',
+          steps: ['My name is + 이름', 'Can I play + 놀이 이름 + too?', 'I like + 좋아하는 것'],
+          mistake: '"Can I play tag?"처럼 too를 빼도 괜찮아요. 아직 어려우면 짧게 해도 돼요.',
+          more: '놀이 이름: tag(술래잡기), soccer, swings, slide, jump rope(줄넘기)' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

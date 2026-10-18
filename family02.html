@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 생활 첫걸음 (가족편) / Unit 2 Doctor & Pharmacy
+// ME: 학습자(부모) 이름. 판매용은 'Me' 또는 'Mina' 등으로 교체
+const ME = 'Me';
+const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 생활 첫걸음 (가족편)',
+  gradeLabel: '주재원 가족 생활 영어',
+  theme: { main: '#ff7a45', sub: '#ffe6da', ink: '#2b2d3a', card: '#fff4ee' },
+  unitNo: '02', unitTitle: 'Doctor & Pharmacy', startPage: 12,
+  cover: { title: 'Doctor &<br>Pharmacy', subtitle: '병원 예약·증상 말하기·보험·약국 · 가족편 Unit 2' },
+  tip: '안내: 이 교재는 표현 연습용이에요. 증상·약·보험 처리는 반드시 의료진과 보험사의 안내를 따르고, 급한 상황은 911 또는 응급실을 이용하세요.',
+  pages: [
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Talk', title: '병원에 전화해서 예약하기' },
+      { type: 'listen' },
+      { type: 'dialog', scene: '소아과(clinic)에 전화를 걸었어요.', lines: [
+        { who: 'Clinic', en: 'Auburn Family Clinic. How can I help you?', ko: '오번 패밀리 클리닉입니다. 무엇을 도와드릴까요?' },
+        { who: ME, me: true, en: "Hi. I'd like to make an appointment.", ko: '안녕하세요. 예약하고 싶어요.' },
+        { who: 'Clinic', en: 'Sure. Is this for you or your child?', ko: '네. 본인이세요, 아이세요?' },
+        { who: ME, me: true, en: "It's for my daughter. She has a fever.", ko: '딸이에요. 열이 있어요.' },
+        { who: 'Clinic', en: 'Can I have her name and date of birth?', ko: '이름과 생년월일을 알려 주시겠어요?' },
+        { who: ME, me: true, en: "Her name is Seoah. It's April 9th, 2018.", ko: '이름은 서아예요. 2018년 4월 9일이에요.' },
+        { who: 'Clinic', en: 'Thanks. Do you have insurance?', ko: '감사합니다. 보험 있으세요?' } ] },
+      { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
+      { type: 'phrases', items: [
+        { en: "I'd like to make an appointment.", ko: '예약하고 싶어요.', note: '"book"보다 "make an appointment"가 일반적이에요.' },
+        { en: 'She has a fever.', ko: '열이 있어요.', note: '증상은 "have + 증상"으로 말해요. have a cough(기침)' },
+        { en: 'Her date of birth is ...', ko: '생년월일은 ...예요.', note: '미국식: 월/일/연도 순서. 4/9/2018은 4월 9일(예시)' },
+        { en: 'Do you take this insurance?', ko: '이 보험 받으세요?', note: '병원이 해당 보험을 받는지 묻는 말' } ] },
+      { type: 'tip', pose: 'idea', text: '미국 병원은 <b>예약제</b>가 일반적이고 대기가 길 수 있어요. 첫 방문은 <b>보험증(insurance card)</b>과 신분증을 챙기고 일찍 가는 경우가 많아요.' }
+    ],
+    [
+      { type: 'stage', n: 1 },
+      { type: 'section', tag: 'Symptoms', title: '증상 말하기 & 보험·비용' },
+      { type: 'phrases', items: [
+        { en: 'I have a headache.', ko: '머리가 아파요.', note: '"I have a ~ache" 패턴: stomachache(복통)' },
+        { en: 'My stomach hurts.', ko: '배가 아파요.', note: '"hurts"는 어디가 아픈지 말할 때 써요.' },
+        { en: 'She has had a cough since Monday.', ko: '월요일부터 기침을 해요.', note: 'since + 시점 = ~부터. 시작 시점을 알려요.' },
+        { en: "She's allergic to peanuts.", ko: '땅콩 알레르기가 있어요.', note: '알레르기는 꼭 먼저 알려 주세요.' },
+        { en: "Here's my insurance card.", ko: '여기 보험증이에요.', note: '접수 때 건네며 말해요.' },
+        { en: 'How much is the copay?', ko: '본인 부담금(copay)은 얼마예요?', note: 'copay = 진료 때 내는 정액. 보험마다 달라요.' } ] },
+      { type: 'section', tag: 'Pharmacy', title: '약국에서 약 받기' },
+      { type: 'phrases', items: [
+        { en: "I'm here to pick up a prescription.", ko: '처방약을 받으러 왔어요.', note: 'prescription = 처방전/처방약' },
+        { en: 'Her name is Seoah Choi.', ko: '이름은 최서아예요.', note: '처방은 이름·생년월일로 확인하는 경우가 많아요.' },
+        { en: 'How often should she take it?', ko: '얼마나 자주 먹여야 하나요?', note: '복용법은 약사에게 꼭 확인해요.' },
+        { en: 'Are there any side effects?', ko: '부작용이 있나요?', note: '' } ] },
+      { type: 'grid', items: [
+        { label: '연습 1', level: '하', question: '병원에 전화해서 <b>예약하고 싶다</b>고 말하는 문장은?',
+          choices: ["I'd like to make an appointment.", 'I want a doctor now.', 'Where is my medicine?'], answer: '①', lines: 0,
+          sol: { idea: "appointment = 약속·예약. \"make an appointment\"는 병원·미용실 등 어디서나 쓰는 덩어리 표현이에요.",
+            steps: ['하고 싶은 일: make an appointment', "공손한 틀: I'd like to + 동사", '→ I\'d like to make an appointment.'],
+            mistake: '"reservation"은 식당·호텔 예약에 쓰고, 병원은 appointment를 써요.',
+            more: '"Do you have anything available tomorrow?(내일 가능한 시간 있나요?)"를 덧붙여 보세요.' } },
+        { label: '연습 2', level: '하', question: '약국에서 <b>처방약을 받으러 왔다</b>고 말하려면?',
+          choices: ['I\'d like to enroll.', 'Do you take cash?', 'I\'m here to pick up a prescription.'], answer: '③', lines: 0,
+          sol: { idea: "pick up = (맡겨 둔 것을) 찾아가다. 약, 주문한 음식, 택배에 두루 써요.",
+            steps: ["I'm here to + 동사 = ~하러 왔어요", 'pick up a prescription = 처방약 찾기', '이름과 생년월일을 이어서 말하기'],
+            mistake: "\"take\"가 아니라 pick up이에요. take는 \"약을 먹다\"라는 뜻으로 써요.",
+            parent: '약 정보와 복용법은 약사 설명과 약 봉투 안내를 우선 확인하세요.' } }
+      ] }
+    ],
+    [
+      { type: 'stage', n: 3 },
+      { type: 'grid', items: [
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">She has a ________. Her temperature is high.</span><br>(힌트: 열)', lines: 1, answer: 'fever',
+          sol: { idea: 'fever = 열. "have a fever"는 열이 있다는 가장 흔한 표현이에요.',
+            steps: ['증상 말하기: have + 증상', '열 = fever, 기침 = cough, 두통 = headache', '→ She has a fever.'],
+            mistake: '"She is fever."처럼 be동사를 쓰지 않아요. have를 써요.',
+            check: '체온은 미국에서 화씨(°F)를 주로 써요. 열의 기준과 대처는 의료진에게 확인하세요.' } },
+        { label: '연습 4', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Here\'s my insurance ________.</span><br>(힌트: 카드)', lines: 1, answer: 'card',
+          sol: { idea: '병원 접수에서는 보험증을 건네며 "Here\'s my ~"라고 말해요. Here\'s = 여기 있어요.',
+            steps: ["Here's my + 건네는 물건", 'insurance card = 보험증', '신분증은 ID, 운전면허는 driver\'s license'],
+            mistake: 'insurance는 셀 수 없는 명사라 an insurance로 쓰지 않아요.',
+            more: '"Here\'s my ID."처럼 같은 틀로 다른 서류도 건넬 수 있어요.' } }
+      ] },
+      { type: 'card', label: '실전 롤플레이', level: '중', title: '배우자와 병원·약국 연습하기', question: '한 사람은 접수 직원·약사, 한 사람은 나를 맡아 보세요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>써 본 표현에 ✓ 하세요: □ I\'d like to make an appointment. □ She has a fever. □ Here\'s my insurance card. □ I\'m here to pick up a prescription.',
+        answer: '(활동)', sol: { idea: '병원 전화는 표정이 없어서 더 어려워요. 이름·생년월일·증상을 미리 입으로 말해 두면 훨씬 수월해요.', steps: ['아이 이름 철자(spelling) 말하기 연습', '생년월일을 월/일/연도 순으로 말하기', '증상을 한 문장으로 말하기'], parent: '의료 내용이 복잡하면 "Could you write that down?(적어 주시겠어요?)"라고 부탁해도 좋아요.' } },
+      { type: 'stage', n: 4 },
+      { type: 'card', label: '내 상황에 맞게 바꿔 쓰기', level: '상', title: '', question: '우리 가족 상황에 맞게 빈칸을 채워 소리 내어 읽어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">I\'d like to make an appointment for ______________.<br>He/She has had ______________ since ______________.<br>He/She is allergic to ______________.<br>Do you take ______________ insurance?</span>',
+        answer: `(예) I'd like to make an appointment for my daughter. She has had a cough since Monday. She is allergic to peanuts. Do you take this insurance?`,
+        sol: { idea: '예약 대상 → 증상과 시작 시점 → 알레르기 → 보험 순서로 말하면 접수 직원이 필요한 정보를 한 번에 얻어요.',
+          steps: ['I\'d like to make an appointment for + 사람', 'has + 증상 + since + 시점', "is allergic to + 알레르기 원인", 'Do you take + 보험 이름 + insurance?'],
+          mistake: 'since(~부터)와 함께 쓰면 "has had"(현재완료)가 자연스러워요. "has a cough since"는 어색해요.',
+          more: '정확한 증상 판단과 약 복용은 의료진 안내를 따르세요. 본문은 표현 연습용이에요.' } }
+    ]
+  ]
+};
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>
