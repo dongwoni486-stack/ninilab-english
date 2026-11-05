@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 생존 회화 / Unit 11 Asking for Help · 단어 익히기 + 단어 테스트
+const KID = 'Seoah';
+const big = s => '<span class="en say" style="font-size:15px;font-weight:800">' + s + '</span>';
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '11', unitTitle: 'Asking for Help', startPage: 1,
+  tip: '부모님께: 하루에 3~4개씩 단어를 소리 내어 읽고, 예문 속 상황(손 들기, 연필 빌리기 등)을 몸짓으로 흉내 내며 익히게 해 주세요.',
+  pages: [
+    [
+      { type: 'section', tag: 'Words', title: 'Unit 11 단어 익히기' },
+      { type: 'listen' },
+      { type: 'phrases', items: [
+        { en: 'lost and found', ko: '분실물 보관함', note: 'Check the lost and found. (분실물함 확인해요)' },
+        { en: 'hallway', ko: '복도', note: 'No running in the hallway. (복도에서 뛰지 마요)' },
+        { en: 'hall pass', ko: '복도 통행증', note: 'Take the hall pass. (통행증 챙겨요)' },
+        { en: 'borrow', ko: '빌리다', note: 'May I borrow a pencil? (연필 빌려도 돼요?)' },
+        { en: 'forgot', ko: '깜빡 잊었다 (forget의 과거형)', note: 'I forgot my homework. (숙제를 깜빡했어요)' },
+        { en: 'upstairs', ko: '위층(에)', note: 'The library is upstairs. (도서관은 위층이에요)' },
+        { en: 'across from', ko: '~의 맞은편에', note: "It's across from the gym. (체육관 맞은편이에요)" },
+        { en: 'raise your hand', ko: '손을 들다', note: KID + ' raises her hand. (서아가 손을 들어요)' },
+        { en: 'directions', ko: '(문제의) 지시문, 설명', note: 'Read the directions first. (지시문 먼저 읽어요)' },
+        { en: 'worksheet', ko: '학습지', note: 'Write your name on the worksheet. (학습지에 이름 써요)' },
+        { en: 'explain', ko: '설명하다', note: 'Can you explain it again? (다시 설명해 줄래요?)' },
+        { en: 'repeat', ko: '다시 말하다, 반복하다', note: 'Can you repeat that, please? (다시 말해 줄래요?)' }
+      ] }
+    ],
+    [
+      { type: 'section', tag: 'Check', title: '단어 테스트' },
+      { type: 'grid', items: [
+        { label: 'Word 1', level: '하', question: '단어의 뜻을 고르세요.<br>' + big('borrow'),
+          choices: ['빌리다', '돌려주다', '잃어버리다'], answer: '①', lines: 0,
+          sol: { idea: 'borrow는 남의 물건을 잠깐 "빌려 쓰는" 거예요. "May I borrow ~?"로 자주 들어요.',
+            steps: ['borrow = 빌리다 (내가 받는 쪽)', 'May I borrow a pencil? = 연필 빌려도 돼요?'],
+            mistake: '돌려주다는 return이에요. 빌린 물건은 꼭 return 해요!' } },
+        { label: 'Word 2', level: '하', question: '단어의 뜻을 고르세요.<br>' + big('directions'),
+          choices: ['정답', '(문제의) 지시문', '쉬는 시간'], answer: '②', lines: 0,
+          sol: { idea: 'direction은 "방향"이에요. 문제를 어느 방향으로 풀지 알려 주는 글이라서 수업에서는 "지시문"이에요.',
+            steps: ['direction = 방향', 'directions = 어떻게 하라는 설명(지시문)', 'Read the directions. = 지시문을 읽어요.'],
+            mistake: '정답은 answer, 쉬는 시간은 recess예요.' } },
+        { label: 'Word 3', level: '중', question: '뜻에 맞게 단어를 쓰세요.<br>' + big('h _ _ _ _ _ _ (복도)'), lines: 1, answer: 'hallway',
+          sol: { idea: 'hall(넓은 공간) + way(길) = hallway. 교실과 교실을 잇는 "길"이라고 기억해요.',
+            steps: ['hall + way 두 덩어리로 나누기', 'l을 두 번 쓰기: ha-ll-way'],
+            mistake: 'halway처럼 l을 하나만 쓰기 쉬워요. hall은 l이 두 개!' } },
+        { label: 'Word 4', level: '중', question: '뜻에 맞게 단어를 쓰세요.<br>' + big('Can you e _ _ _ _ _ _ it again? (설명하다)'), lines: 1, answer: 'explain',
+          sol: { idea: 'ex-plain으로 나눠요. plain은 "알기 쉬운"이라서 explain은 "쉽게 풀어 말해 주다"예요.',
+            steps: ['ex + plain 두 덩어리', 'plain의 ai 철자 기억하기'],
+            mistake: 'repeat(다시 말하다)와 헷갈리지 마요. repeat은 똑같이 다시, explain은 이해되게 풀어서 말해요.' } },
+        { label: 'Word 5', level: '중', question: '빈칸에 알맞은 단어를 고르세요.<br>' + big('I ________ my lunch at home.'),
+          choices: ['borrow', 'repeat', 'forgot'], answer: '③', lines: 0,
+          sol: { idea: '점심을 집에 두고 온 건 이미 일어난 일이라서 forget의 과거형 forgot을 써요.',
+            steps: ['at home = 집에 (두고 왔다)', '깜빡 잊었다 = forgot'],
+            mistake: 'forgot(잊었다)와 lost(잃어버렸다)는 달라요. 어디 있는지 알면 forgot, 모르면 lost예요.' } },
+        { label: 'Word 6', level: '중', question: '빈칸에 알맞은 단어를 고르세요.<br>' + big('The art room is ________. Go up the stairs.'),
+          choices: ['across from', 'upstairs', 'hallway'], answer: '②', lines: 0,
+          sol: { idea: 'up(위) + stairs(계단) = upstairs. 계단을 올라가면 있는 곳이에요.',
+            steps: ['Go up the stairs = 계단을 올라가요', '그러니까 위층 = upstairs'],
+            mistake: '아래층은 downstairs예요. up(위)와 down(아래)만 바꾸면 돼요.' } }
+      ] },
+      { type: 'card', label: '문장 만들기', level: '상', title: '', question: '아래 단어 중 2개를 넣어 나만의 문장을 써 보세요.<br><span class="en" style="font-size:15px;font-weight:800">forgot · borrow · raise your hand · repeat · worksheet</span>', lines: 2,
+        answer: '(예) I forgot my pencil. May I borrow one?',
+        sol: { idea: '실제로 교실에서 일어날 상황을 떠올리면 문장이 쉽게 나와요.',
+          steps: ['상황 고르기: 연필을 두고 왔어요', '무슨 일인지 말하기: I forgot my pencil.', '부탁하기: May I borrow one?'],
+          mistake: 'I forget my pencil.은 지금 일처럼 들려요. 이미 잊은 일은 forgot으로 써요.' } }
+    ]
+  ]
+};
+
+window.BOOK.pages[0].push({ type:'card', label:'따라 쓰기', level:'하', title:'소리 내어 읽으며 두 번씩 써 보기', question:'위 단어 중 4개를 골라, 소리 내어 읽으면서 두 번씩 따라 써 보세요.', lines:4, answer:'(활동)', sol:{ idea:'눈으로만 보는 것보다 소리 내어 읽으면서 손으로 쓰면 소리·철자·뜻이 함께 기억돼요.', steps:['단어를 한 번 듣고(폰 QR) 따라 말하기','한 글자씩 소리와 맞춰 쓰기','뜻을 가리고 다시 써 보기'] } });
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

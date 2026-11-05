@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 생존 회화 / Unit 4 Lunch Time · 단어 익히기 + 단어 테스트
+const KID = 'Seoah';
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '04', unitTitle: 'Lunch Time', startPage: 1,
+  tip: '부모님께: 저녁 식탁에서 쟁반, 냅킨, 우유팩 같은 실제 물건을 가리키며 영어 단어로 하루 한 번씩 불러 주시면 아이가 훨씬 오래 기억해요.',
+  pages: [
+    [
+      { type: 'section', tag: 'Words', title: 'Unit 04 단어 익히기' },
+      { type: 'listen' },
+      { type: 'phrases', items: [
+        { en: 'cafeteria', ko: '급식실, 학교 식당', note: KID + ' eats in the cafeteria. (서아는 급식실에서 먹어요.)' },
+        { en: 'tray', ko: '식판, 쟁반', note: 'Grab a tray, please. (식판을 하나 집으세요.)' },
+        { en: 'napkin', ko: '냅킨', note: 'Wipe with a napkin. (냅킨으로 닦아요.)' },
+        { en: 'carton', ko: '(우유) 팩, 종이 상자', note: 'Open your milk carton. (우유팩을 열어요.)' },
+        { en: 'spill', ko: '쏟다, 엎지르다', note: 'Oops! I spilled my milk. (앗! 우유를 쏟았어요.)' },
+        { en: 'line up', ko: '줄을 서다', note: 'Line up for lunch. (점심 먹으러 줄 서요.)' },
+        { en: 'allergic', ko: '알레르기가 있는', note: 'I am allergic to nuts. (견과류 알레르기가 있어요.)' },
+        { en: 'trash can', ko: '쓰레기통', note: 'Put it in the trash can. (쓰레기통에 넣어요.)' },
+        { en: 'worksheet', ko: '학습지, 활동지', note: 'Finish your worksheet. (학습지를 끝내세요.)' },
+        { en: 'subtract', ko: '빼다 (뺄셈하다)', note: 'Subtract 3 from 10. (10에서 3을 빼요.)' },
+        { en: 'paragraph', ko: '문단', note: 'Read the first paragraph. (첫 문단을 읽어요.)' },
+        { en: 'turn in', ko: '제출하다, 내다', note: 'Turn in your homework. (숙제를 내세요.)' }
+      ] }
+    ],
+    [
+      { type: 'section', tag: 'Check', title: '단어 테스트' },
+      { type: 'grid', items: [
+        { label: 'Word 1', level: '하', question: '<span class="en" style="font-size:15px;font-weight:800">tray</span> 의 뜻은 무엇일까요?',
+          choices: ['식판, 쟁반', '냅킨', '우유팩'], answer: '①', lines: 0,
+          sol: { idea: '급식실에서 음식을 올려 들고 다니는 넓적한 판이 tray예요.',
+            steps: ['tray는 "트레이"라고 소리 나요.', '카페에서 "트레이에 담아 드릴게요"라는 말을 떠올려요.', '식판 = tray'],
+            mistake: "napkin(냅킨), carton(우유팩)은 식판 위에 올리는 물건이에요. 판 자체는 tray예요." } },
+        { label: 'Word 2', level: '하', question: '수학 시간에 선생님이 <span class="en" style="font-size:15px;font-weight:800">subtract</span> 하라고 했어요. 무슨 뜻일까요?',
+          choices: ['더하다', '빼다', '나누다'], answer: '②', lines: 0,
+          sol: { idea: 'sub는 "아래로, 덜어 내는" 느낌이에요. 숫자를 덜어 내니까 빼기예요.',
+            steps: ['sub = 아래, 덜다 (subway는 땅 아래 기차)', 'subtract = 빼다', '10 - 3 = 7 은 subtraction(뺄셈)이에요.'],
+            mistake: "더하다는 add, 나누다는 divide예요. subtract는 빼기라고 꼭 기억해요." } },
+        { label: 'Word 3', level: '중', question: '빈칸에 알맞은 단어를 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Wipe your mouth with a ________.</span><br><span style="font-size:12px">(뜻: 냅킨으로 입을 닦아요 · 힌트: n _ p _ _ n)</span>', lines: 1, answer: 'napkin',
+          sol: { idea: '우리말 "냅킨"과 소리가 거의 같아서 소리 나는 대로 쓰면 돼요.',
+            steps: ['nap + kin 두 조각으로 나눠요.', 'nap(낮잠)처럼 n-a-p', 'kin은 k-i-n', 'napkin 완성'],
+            mistake: "'nepkin'이나 'napkine'으로 쓰지 않게 조심해요. 끝에 e가 없어요." } },
+        { label: 'Word 4', level: '중', question: '빈칸에 알맞은 단어를 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Be careful! Don\'t ________ your milk.</span><br><span style="font-size:12px">(뜻: 조심해! 우유 쏟지 마 · 힌트: s _ _ _ l)</span>', lines: 1, answer: 'spill',
+          sol: { idea: '컵이 넘어져 우유가 "스-필" 하고 흘러나오는 소리를 떠올려요.',
+            steps: ['s-p 로 시작해요.', '가운데 i', '끝은 l 을 두 번: ll', 'spill 완성'],
+            mistake: "끝의 l은 두 개예요. 'spil'이라고 쓰지 않아요. 쏟았다(과거)는 spilled예요." } },
+        { label: 'Word 5', level: '중', question: '문장에 알맞은 단어를 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">Please ________ your worksheet now.</span><br><span style="font-size:12px">(뜻: 지금 학습지를 내세요)</span>',
+          choices: ['turn in', 'line up', 'spill'], answer: '①', lines: 0,
+          sol: { idea: '다 한 학습지를 선생님께 건네는 것이 turn in(제출하다)이에요.',
+            steps: ['turn = 돌리다, in = 안으로', '내 손에서 선생님 쪽 안으로 넘겨준다고 생각해요.', 'turn in your worksheet = 학습지를 내다'],
+            mistake: "line up은 줄을 서는 것이라 학습지와 어울리지 않아요. 'turn on'(불을 켜다)과도 헷갈리지 마세요." } },
+        { label: 'Word 6', level: '상', question: '문장에 알맞은 단어를 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">A ________ has a few sentences about one idea.</span><br><span style="font-size:12px">(뜻: ○○은 한 가지 생각에 대한 몇 개의 문장이에요)</span>',
+          choices: ['tray', 'paragraph', 'carton'], answer: '②', lines: 0,
+          sol: { idea: '여러 문장이 모여 한 덩어리가 된 것이 paragraph(문단)예요.',
+            steps: ['graph는 "쓰다, 그리다"라는 뜻에서 왔어요. (그래프도 그린 것)', '문장들을 모아 쓴 덩어리 = paragraph', '글쓰기 시간에 매일 듣는 단어예요.'],
+            mistake: "sentence는 문장 하나, paragraph는 문장 여러 개가 모인 문단이에요. 크기가 달라요." } }
+      ] },
+      { type: 'card', label: '문장 만들기', level: '상', title: '', question: '아래 단어 중 2개를 골라 나만의 문장을 써 보세요.<br><span class="en" style="font-size:15px;font-weight:800">cafeteria · tray · napkin · spill · line up · trash can</span>', lines: 2,
+        answer: '(예) I line up in the cafeteria. I put my napkin in the trash can.',
+        sol: { idea: '오늘 점심시간에 실제로 한 일을 떠올리면 문장이 쉽게 나와요.',
+          steps: ['단어 2개를 골라요.', '나(I) + 한 일 + 장소나 물건 순서로 써요.', '문장 끝에 마침표(.)를 찍어요.'],
+          mistake: "line up 뒤에 장소나 목적을 쓸 땐 in이나 for를 넣어요. (line up in the cafeteria, line up for lunch)" } }
+    ]
+  ]
+};
+
+window.BOOK.pages[0].push({ type:'card', label:'따라 쓰기', level:'하', title:'소리 내어 읽으며 두 번씩 써 보기', question:'위 단어 중 4개를 골라, 소리 내어 읽으면서 두 번씩 따라 써 보세요.', lines:4, answer:'(활동)', sol:{ idea:'눈으로만 보는 것보다 소리 내어 읽으면서 손으로 쓰면 소리·철자·뜻이 함께 기억돼요.', steps:['단어를 한 번 듣고(폰 QR) 따라 말하기','한 글자씩 소리와 맞춰 쓰기','뜻을 가리고 다시 써 보기'] } });
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>

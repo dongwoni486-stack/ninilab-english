@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>니니랩 English 듣기</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<script>// 니니랩 English · 미국 학교 첫걸음 / Unit 10 How Do You Feel? · 단어 익히기 + 단어 테스트
+const KID = 'Seoah';
+window.BOOK = {
+  subject: 'english',
+  brand: ['니니', '랩', 'English'],
+  series: '니니랩 English · 미국 학교 첫걸음',
+  gradeLabel: '미국 초등학교 적응 회화',
+  unitNo: '10', unitTitle: 'How Do You Feel?', startPage: 1,
+  tip: '부모님께: 하루에 한 번 "How do you feel today?"라고 물어보고, 아이가 오늘 배운 감정 단어로 대답하게 해 주세요.',
+  pages: [
+    [
+      { type: 'section', tag: 'Words', title: 'Unit 10 단어 익히기' },
+      { type: 'listen' },
+      { type: 'phrases', items: [
+        { en: 'scared', ko: '무서운, 겁먹은', note: "I'm scared of dogs. (개가 무서워요.)" },
+        { en: 'proud', ko: '자랑스러운, 뿌듯한', note: KID + ' is proud. (서아는 뿌듯해요.)' },
+        { en: 'lonely', ko: '외로운', note: 'I feel lonely. (외로워요.)' },
+        { en: 'upset', ko: '속상한, 기분이 상한', note: 'Emma is upset. (Emma가 속상해요.)' },
+        { en: 'calm down', ko: '진정하다', note: "Let's calm down. (진정하자.)" },
+        { en: 'take a deep breath', ko: '숨을 깊이 쉬다', note: 'Take a deep breath. (숨을 크게 쉬어.)' },
+        { en: 'bully', ko: '괴롭히다 / 괴롭히는 아이', note: "Don't bully others. (남을 괴롭히지 마.)" },
+        { en: 'kind', ko: '친절한, 착한', note: 'Be kind to friends. (친구에게 친절하게.)' },
+        { en: 'counselor', ko: '상담 선생님', note: 'Talk to the counselor. (상담 선생님께 말해.)' },
+        { en: 'worksheet', ko: '학습지', note: 'Finish your worksheet. (학습지를 끝내요.)' },
+        { en: 'paragraph', ko: '문단', note: 'Write one paragraph. (한 문단을 써요.)' },
+        { en: 'subtract', ko: '빼다(뺄셈하다)', note: 'Subtract 3 from 8. (8에서 3을 빼요.)' } ] }
+    ],
+    [
+      { type: 'section', tag: 'Check', title: '단어 테스트' },
+      { type: 'grid', items: [
+        { label: 'Word 1', level: '하', question: '<span class="en" style="font-size:15px;font-weight:800">lonely</span>의 뜻은?',
+          choices: ['외로운', '자랑스러운', '무서운'], answer: '①', lines: 0,
+          sol: { idea: 'lonely 안에 one(하나)이 숨어 있어요. 혼자(one)라서 외로운 거예요.',
+            steps: ['l-one-ly → one = 하나, 혼자', '혼자 있어서 쓸쓸한 기분 = 외로운'],
+            mistake: 'lovely(사랑스러운)와 철자가 비슷해요. lonely는 n, lovely는 v예요.' } },
+        { label: 'Word 2', level: '하', question: '<span class="en" style="font-size:15px;font-weight:800">counselor</span>의 뜻은?',
+          choices: ['급식실', '상담 선생님', '교장 선생님'], answer: '②', lines: 0,
+          sol: { idea: '마음이 힘들 때 이야기를 들어 주는 학교 선생님이 counselor예요.',
+            steps: ['counsel = 조언하다', '-or = ~하는 사람 (teacher의 -er처럼)', 'counselor = 조언해 주는 사람'],
+            mistake: '교장 선생님은 principal, 급식실은 cafeteria예요.' } },
+        { label: 'Word 3', level: '중', question: '뜻에 맞게 철자를 쓰세요. <b>무서운, 겁먹은</b><br><span class="en" style="font-size:15px;font-weight:800">s _ _ _ e d</span>', lines: 1, answer: 'scared',
+          sol: { idea: 'scare(겁주다)에 d를 붙이면 "겁먹은"이 돼요.',
+            steps: ['s-c-a-r-e', '끝에 d → scared'],
+            mistake: 'sacred처럼 a와 c 순서를 바꾸지 않게 조심해요. 소리대로 "스-케어-드"예요.' } },
+        { label: 'Word 4', level: '중', question: '뜻에 맞게 철자를 쓰세요. <b>자랑스러운, 뿌듯한</b><br><span class="en" style="font-size:15px;font-weight:800">p _ _ _ d</span>', lines: 1, answer: 'proud',
+          sol: { idea: '"프라우드" 소리에서 ou가 "아우" 소리를 내요.',
+            steps: ['p-r-o-u-d', 'ou = 아우 (loud, cloud와 같은 소리)'],
+            mistake: 'prowd나 praud로 쓰지 않아요. cloud(구름)를 떠올리면 쉬워요.' } },
+        { label: 'Word 5', level: '중', question: '빈칸에 알맞은 말을 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">I\'m upset. I need to ________.</span>',
+          choices: ['calm down', 'paragraph', 'bully'], answer: '①', lines: 0,
+          sol: { idea: '속상할 때는 마음을 가라앉혀야 해요. calm down = 진정하다.',
+            steps: ['upset = 속상한', 'need to + 할 일', 'calm down = 진정하다'],
+            mistake: 'bully는 괴롭히는 행동이라 문장에 어울리지 않아요. paragraph는 글쓰기 단어예요.' } },
+        { label: 'Word 6', level: '중', question: '빈칸에 알맞은 말을 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">8 - 3 = 5. You ________ 3 from 8.</span>',
+          choices: ['paragraph', 'kind', 'subtract'], answer: '③', lines: 0,
+          sol: { idea: '빼기 기호(-)는 subtract예요. 수학 시간에 자주 들어요.',
+            steps: ['sub = 아래로, 줄이다 (subway = 땅 아래 길)', 'subtract A from B = B에서 A를 빼다'],
+            mistake: '더하기는 add, 빼기는 subtract예요. 헷갈리지 않게 + 와 - 를 같이 외워요.' } }
+      ] },
+      { type: 'card', label: '문장 만들기', level: '상', title: '', question: '아래 단어 중 <b>2개</b>를 넣어 나만의 문장을 써 보세요.<br><span class="en" style="font-size:15px;font-weight:800">scared · proud · kind · take a deep breath · counselor</span>', lines: 2,
+        answer: "(예) I was scared, so I took a deep breath. / I am proud because I was kind to my friend.",
+        sol: { idea: '기분 단어 + 이유나 행동 단어를 함께 쓰면 문장이 자연스러워요.',
+          steps: ['기분 고르기: I am scared / proud', 'so(그래서)나 because(왜냐하면)로 잇기', '행동 단어 넣기: took a deep breath, was kind'],
+          mistake: 'I proud처럼 am을 빼먹지 않아요. 기분 단어 앞에는 I am(I\'m)이 와요.' } }
+    ]
+  ]
+};
+
+window.BOOK.pages[0].push({ type:'card', label:'따라 쓰기', level:'하', title:'소리 내어 읽으며 두 번씩 써 보기', question:'위 단어 중 4개를 골라, 소리 내어 읽으면서 두 번씩 따라 써 보세요.', lines:4, answer:'(활동)', sol:{ idea:'눈으로만 보는 것보다 소리 내어 읽으면서 손으로 쓰면 소리·철자·뜻이 함께 기억돼요.', steps:['단어를 한 번 듣고(폰 QR) 따라 말하기','한 글자씩 소리와 맞춰 쓰기','뜻을 가리고 다시 써 보기'] } });
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{--main:#22a06b;--sub:#d9f5e6;--ink:#16352a}
+body{font-family:'Noto Sans KR',sans-serif;background:#f6f7f5;color:#222;padding-bottom:110px}
+header{background:var(--main);color:#fff;padding:18px 18px 16px}
+header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;font-size:24px;line-height:1.2;margin-top:4px}
+.sec{font-size:13px;font-weight:900;color:var(--ink);margin:20px 16px 8px}
+.scene{font-size:12px;color:#777;margin:0 16px 8px}
+.ln{display:flex;gap:10px;align-items:flex-start;margin:0 12px 8px;padding:12px 14px;background:#fff;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.ln.me{background:var(--sub)}
+.ln .who{font-size:11px;font-weight:900;color:var(--ink);min-width:58px;padding-top:3px}
+.ln.me .who{color:var(--main)}
+.ln .tx{flex:1}
+.ln .en{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;line-height:1.35}
+.ln .ko{font-size:13px;color:#666;margin-top:3px}
+.ln .nt{font-size:12px;color:var(--main);margin-top:3px}
+.ln.play{outline:3px solid #ffcf3f}
+.ln.mute .en{color:transparent;text-shadow:0 0 9px rgba(0,0,0,.35)}
+.hideko .ko{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.bar button{border:0;border-radius:22px;padding:10px 14px;font-size:14px;font-weight:700;background:#eee;color:#333}
+.bar button.on{background:var(--main);color:#fff}
+.bar .big{background:var(--ink);color:#fff;min-width:110px}
+.hint{font-size:12px;color:#888;margin:14px 16px}
+</style></head><body>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<div id="list"></div>
+<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<div class="bar">
+  <button class="big" id="all">▶ 전체 듣기</button>
+  <button id="spd">속도 0.85</button>
+  <button id="ko">한국어 끄기</button>
+  <button id="role">역할 놀이</button>
+</div>
+<script>
+const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
+for (const [k,v] of Object.entries(T)) document.documentElement.style.setProperty('--'+k, v);
+document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
+document.getElementById('ht').textContent = B.unitTitle;
+const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
+const items = []; let html='';
+for (const pg of B.pages) for (const b of pg) {
+  if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
+  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+      html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+      html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
+}
+document.getElementById('list').innerHTML = html;
+let rate=0.85, role=false, running=false;
+const rows=[...document.querySelectorAll('.ln')];
+function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
+function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+  if (role && it.me){ const wait = 1200 + it.en.split(' ').length*550; setTimeout(()=>{row.classList.remove('play');res();}, wait); return; }
+  const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
+  u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
+document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
+document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
+speechSynthesis.getVoices();
+</script></body></html>
