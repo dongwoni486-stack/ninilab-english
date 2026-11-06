@@ -26,9 +26,9 @@ window.BOOK = {
         { en: 'bully', ko: '괴롭히다 / 괴롭히는 아이', note: "Don't bully others. (남을 괴롭히지 마.)" },
         { en: 'kind', ko: '친절한, 착한', note: 'Be kind to friends. (친구에게 친절하게.)' },
         { en: 'counselor', ko: '상담 선생님', note: 'Talk to the counselor. (상담 선생님께 말해.)' },
-        { en: 'worksheet', ko: '학습지', note: 'Finish your worksheet. (학습지를 끝내요.)' },
-        { en: 'paragraph', ko: '문단', note: 'Write one paragraph. (한 문단을 써요.)' },
-        { en: 'subtract', ko: '빼다(뺄셈하다)', note: 'Subtract 3 from 8. (8에서 3을 빼요.)' } ] }
+        { en: 'nervous', ko: '긴장한, 떨리는', note: 'I feel nervous before a test. (시험 전에 떨려요.)' },
+        { en: 'brave', ko: '용감한', note: 'Be brave and tell the truth. (용기 내어 사실을 말해요.)' },
+                { en: 'worried', ko: '걱정하는', note: 'I am worried about my dog. (우리 개가 걱정돼요.)' } ] }
     ],
     [
       { type: 'section', tag: 'Check', title: '단어 테스트' },
@@ -52,21 +52,21 @@ window.BOOK = {
             steps: ['p-r-o-u-d', 'ou = 아우 (loud, cloud와 같은 소리)'],
             mistake: 'prowd나 praud로 쓰지 않아요. cloud(구름)를 떠올리면 쉬워요.' } },
         { label: 'Word 5', level: '중', question: '빈칸에 알맞은 말을 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">I\'m upset. I need to ________.</span>',
-          choices: ['calm down', 'paragraph', 'bully'], answer: '①', lines: 0,
+          choices: ['calm down', 'nervous', 'bully'], answer: '①', lines: 0,
           sol: { idea: '속상할 때는 마음을 가라앉혀야 해요. calm down = 진정하다.',
             steps: ['upset = 속상한', 'need to + 할 일', 'calm down = 진정하다'],
-            mistake: 'bully는 괴롭히는 행동이라 문장에 어울리지 않아요. paragraph는 글쓰기 단어예요.' } },
-        { label: 'Word 6', level: '중', question: '빈칸에 알맞은 말을 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">8 - 3 = 5. You ________ 3 from 8.</span>',
-          choices: ['paragraph', 'kind', 'subtract'], answer: '③', lines: 0,
-          sol: { idea: '빼기 기호(-)는 subtract예요. 수학 시간에 자주 들어요.',
-            steps: ['sub = 아래로, 줄이다 (subway = 땅 아래 길)', 'subtract A from B = B에서 A를 빼다'],
-            mistake: '더하기는 add, 빼기는 subtract예요. 헷갈리지 않게 + 와 - 를 같이 외워요.' } }
+            mistake: 'bully는 괴롭히는 행동이고, nervous는 긴장한 기분이라 "해야 할 일"로 어울리지 않아요.' } },
+        { label: 'Word 6', level: '중', question: '빈칸에 알맞은 말을 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">My dog is sick. I am ________ about him.</span>',
+          choices: ['kind', 'brave', 'worried'], answer: '③', lines: 0,
+          sol: { idea: 'worried는 안 좋은 일이 생길까 봐 "걱정하는" 마음이에요. be worried about ~ = ~이 걱정되다.',
+            steps: ['My dog is sick = 우리 개가 아파요', '걱정되는 기분 → worried', 'worried about + 걱정거리'],
+            mistake: 'kind는 친절한, brave는 용감한이라 아픈 개를 걱정하는 기분과 달라요.' } }
       ] },
       { type: 'card', label: '문장 만들기', level: '상', title: '', question: '아래 단어 중 <b>2개</b>를 넣어 나만의 문장을 써 보세요.<br><span class="en" style="font-size:15px;font-weight:800">scared · proud · kind · take a deep breath · counselor</span>', lines: 2,
         answer: "(예) I was scared, so I took a deep breath. / I am proud because I was kind to my friend.",
         sol: { idea: '기분 단어 + 이유나 행동 단어를 함께 쓰면 문장이 자연스러워요.',
           steps: ['기분 고르기: I am scared / proud', 'so(그래서)나 because(왜냐하면)로 잇기', '행동 단어 넣기: took a deep breath, was kind'],
-          mistake: 'I proud처럼 am을 빼먹지 않아요. 기분 단어 앞에는 I am(I\'m)이 와요.' } }
+          mistake: 'I proud처럼 am을 빼먹지 않아요. 기분 단어 앞에는 am이나 was가 와요. (I am proud. / I was scared.)' } }
     ]
   ]
 };

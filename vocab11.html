@@ -20,14 +20,14 @@ window.BOOK = {
       { type: 'phrases', items: [
         { en: 'lost and found', ko: '분실물 보관함', note: 'Check the lost and found. (분실물함 확인해요)' },
         { en: 'hallway', ko: '복도', note: 'No running in the hallway. (복도에서 뛰지 마요)' },
-        { en: 'hall pass', ko: '복도 통행증', note: 'Take the hall pass. (통행증 챙겨요)' },
-        { en: 'borrow', ko: '빌리다', note: 'May I borrow a pencil? (연필 빌려도 돼요?)' },
+        { en: 'office', ko: '사무실 (교무실)', note: 'Go to the office for help. (도움이 필요하면 사무실로 가요)' },
+        { en: 'lost', ko: '잃어버렸다 (lose의 과거형)', note: 'I lost my library book. (도서관 책을 잃어버렸어요)' },
         { en: 'forgot', ko: '깜빡 잊었다 (forget의 과거형)', note: 'I forgot my homework. (숙제를 깜빡했어요)' },
         { en: 'upstairs', ko: '위층(에)', note: 'The library is upstairs. (도서관은 위층이에요)' },
         { en: 'across from', ko: '~의 맞은편에', note: "It's across from the gym. (체육관 맞은편이에요)" },
-        { en: 'raise your hand', ko: '손을 들다', note: KID + ' raises her hand. (서아가 손을 들어요)' },
+        { en: 'next to', ko: '~의 옆에', note: 'It\'s next to the library. (도서관 옆이에요)' },
         { en: 'directions', ko: '(문제의) 지시문, 설명', note: 'Read the directions first. (지시문 먼저 읽어요)' },
-        { en: 'worksheet', ko: '학습지', note: 'Write your name on the worksheet. (학습지에 이름 써요)' },
+        { en: 'understand', ko: '이해하다', note: 'I don\'t understand. (이해가 안 돼요)' },
         { en: 'explain', ko: '설명하다', note: 'Can you explain it again? (다시 설명해 줄래요?)' },
         { en: 'repeat', ko: '다시 말하다, 반복하다', note: 'Can you repeat that, please? (다시 말해 줄래요?)' }
       ] }
@@ -35,11 +35,11 @@ window.BOOK = {
     [
       { type: 'section', tag: 'Check', title: '단어 테스트' },
       { type: 'grid', items: [
-        { label: 'Word 1', level: '하', question: '단어의 뜻을 고르세요.<br>' + big('borrow'),
-          choices: ['빌리다', '돌려주다', '잃어버리다'], answer: '①', lines: 0,
-          sol: { idea: 'borrow는 남의 물건을 잠깐 "빌려 쓰는" 거예요. "May I borrow ~?"로 자주 들어요.',
-            steps: ['borrow = 빌리다 (내가 받는 쪽)', 'May I borrow a pencil? = 연필 빌려도 돼요?'],
-            mistake: '돌려주다는 return이에요. 빌린 물건은 꼭 return 해요!' } },
+        { label: 'Word 1', level: '하', question: '단어의 뜻을 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">office</span>',
+          choices: ['사무실 (교무실)', '체육관', '도서관'], answer: '①', lines: 0,
+          sol: { idea: '학교의 office는 교장 선생님과 직원들이 일하는 사무실이에요. 길을 잃거나 도움이 필요할 때 가는 곳이에요.',
+            steps: ['office = 사무실', '학교 사무실 = 도움을 받을 수 있는 곳'],
+            mistake: '체육관은 gym, 도서관은 library예요. 도움이 필요하면 먼저 office를 떠올려요.' } },
         { label: 'Word 2', level: '하', question: '단어의 뜻을 고르세요.<br>' + big('directions'),
           choices: ['정답', '(문제의) 지시문', '쉬는 시간'], answer: '②', lines: 0,
           sol: { idea: 'direction은 "방향"이에요. 문제를 어느 방향으로 풀지 알려 주는 글이라서 수업에서는 "지시문"이에요.',
@@ -64,10 +64,10 @@ window.BOOK = {
             steps: ['Go up the stairs = 계단을 올라가요', '그러니까 위층 = upstairs'],
             mistake: '아래층은 downstairs예요. up(위)와 down(아래)만 바꾸면 돼요.' } }
       ] },
-      { type: 'card', label: '문장 만들기', level: '상', title: '', question: '아래 단어 중 2개를 넣어 나만의 문장을 써 보세요.<br><span class="en" style="font-size:15px;font-weight:800">forgot · borrow · raise your hand · repeat · worksheet</span>', lines: 2,
-        answer: '(예) I forgot my pencil. May I borrow one?',
+      { type: 'card', label: '문장 만들기', level: '상', title: '', question: '아래 단어 중 2개를 넣어 나만의 문장을 써 보세요.<br><span class="en" style="font-size:15px;font-weight:800">forgot · lost · next to · repeat · understand</span>', lines: 2,
+        answer: '(예) I forgot my pencil. Can you help me?',
         sol: { idea: '실제로 교실에서 일어날 상황을 떠올리면 문장이 쉽게 나와요.',
-          steps: ['상황 고르기: 연필을 두고 왔어요', '무슨 일인지 말하기: I forgot my pencil.', '부탁하기: May I borrow one?'],
+          steps: ['상황 고르기: 연필을 두고 왔어요', '무슨 일인지 말하기: I forgot my pencil.', '부탁하기: Can you help me?'],
           mistake: 'I forget my pencil.은 지금 일처럼 들려요. 이미 잊은 일은 forgot으로 써요.' } }
     ]
   ]

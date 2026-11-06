@@ -28,7 +28,7 @@ window.BOOK = {
         { en: 'late', ko: '늦은, 늦게', note: "Don't be late! (늦지 마!)" },
         { en: 'add', ko: '더하다', note: 'Add 3 and 4. (3과 4를 더해.)' },
         { en: 'subtract', ko: '빼다', note: 'Subtract 2 from 9. (9에서 2를 빼.)' },
-        { en: 'worksheet', ko: '학습지', note: 'Finish your worksheet. (학습지를 끝내.)' },
+        { en: 'quarter past', ko: '~시 15분', note: 'It\'s quarter past nine. (9시 15분이야.)' },
         { en: 'due', ko: '(숙제) 마감인', note: 'It is due on Friday. (금요일 마감이야.)' }
       ] }
     ],
@@ -55,11 +55,11 @@ window.BOOK = {
           sol: { idea: 'min-ute, "미닛"이라고 소리 나요.',
             steps: ['min(미)', 'ute(닛)', '끝에 e를 잊지 말아요.'],
             mistake: 'hour(1시간)와 구분해요. 60 minutes = 1 hour.' } },
-        { label: 'Word 5', level: '중', question: '빈칸에 알맞은 단어를 고르세요.<br>' + big('The math ________ is due on Friday.'),
-          choices: ['worksheet', 'weekend', 'hour'], answer: '①', lines: 0,
-          sol: { idea: '금요일까지 내야(due) 하는 것은 학습지예요.',
-            steps: ['work(공부) + sheet(종이 한 장) = 학습지', 'due = 내야 하는 마감'],
-            mistake: 'weekend는 주말, hour는 시간이라 "내는 것"이 아니에요.' } },
+        { label: 'Word 5', level: '중', question: '빈칸에 알맞은 단어를 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">The math homework is ________ on Friday.</span>',
+          choices: ['due', 'weekend', 'hour'], answer: '①', lines: 0,
+          sol: { idea: '금요일까지 내야 하는 숙제는 "마감인" 상태예요. 이때 due를 써요.',
+            steps: ['be due on + 요일 = ~까지 내야 하다', 'due = 내야 하는 마감'],
+            mistake: 'weekend는 주말, hour는 시간이라 "마감인"이라는 뜻이 아니에요.' } },
         { label: 'Word 6', level: '중', question: '빈칸에 알맞은 단어를 고르세요.<br>' + big("School starts at 8:00. Don't be ________!"),
           choices: ['half past', 'early', 'late'], answer: '③', lines: 0,
           sol: { idea: '"Don\'t be ___!"는 늦지 말라고 할 때 자주 들어요.',
@@ -67,9 +67,9 @@ window.BOOK = {
             mistake: 'early를 넣으면 "일찍 오지 마!"가 되어 이상해요. 반대말 짝 early/late를 함께 기억해요.' } }
       ] },
       { type: 'card', label: '문장 만들기', level: '상', title: '',
-        question: '아래 단어 중 2개를 넣어 나만의 문장을 써 보세요.<br><span class="en" style="font-size:15px;font-weight:800">calendar · weekend · early · late · worksheet · half past</span>',
+        question: '아래 단어 중 2개를 넣어 나만의 문장을 써 보세요.<br><span class="en" style="font-size:15px;font-weight:800">calendar · weekend · early · late · quarter past · half past</span>',
         lines: 2,
-        answer: "(예) I get up early on the weekend. / My worksheet is due at half past two.",
+        answer: "(예) I get up early on the weekend. / I am never late because school starts at half past eight.",
         sol: { idea: '내 하루와 연결하면 단어가 오래 기억에 남아요.',
           steps: ['단어 2개를 먼저 골라요.', '나(I)나 학교 이야기로 문장을 만들어요.', '소리 내어 읽어 봐요.'],
           mistake: 'weekend 앞에는 on the를 써요: on the weekend.' } }
