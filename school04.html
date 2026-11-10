@@ -116,16 +116,32 @@ header .s{font-size:12px;opacity:.85}header h1{font-family:'Nunito',sans-serif;f
 .bar .big{background:var(--ink);color:#fff;min-width:110px}
 #hint{position:fixed;left:12px;right:12px;max-width:440px;margin:0 auto;bottom:118px;background:#16352a;color:#fff;border-radius:14px;padding:12px 14px;font-size:15px;font-weight:700;text-align:center;display:none;z-index:5}#hint.on{display:block}#hint.mic{background:#22a06b}#heard{position:fixed;left:12px;right:12px;max-width:440px;margin:0 auto;bottom:96px;text-align:center;font-family:Nunito,sans-serif;font-size:14px;color:#16352a;z-index:5}
 .hint{font-size:12px;color:#888;margin:14px 16px}
+.ln.rec{outline:3px solid #ff4f7b}
+#stars{font-size:14px;margin-top:6px;letter-spacing:1px}
+#quiz{position:fixed;inset:0;background:rgba(22,53,42,.55);display:none;align-items:center;justify-content:center;z-index:4;padding:16px}
+#quiz.on{display:flex}
+#quiz .card{background:#fff;border-radius:18px;padding:20px 18px;width:100%;max-width:440px;text-align:center}
+#quiz .qn{font-size:12px;color:#888;font-weight:700}
+#quiz .q{font-family:Nunito,sans-serif;font-size:20px;font-weight:800;margin:10px 0 4px;color:var(--ink)}
+#quiz .qk{font-size:13px;color:#777}
+#quiz .ak{font-size:15px;font-weight:700;margin-top:16px;color:var(--main)}
+#quiz .a{font-family:Nunito,sans-serif;font-size:20px;font-weight:800;margin-top:6px;min-height:28px;color:var(--main)}
+#quiz .qb{margin-top:16px;display:flex;gap:8px;justify-content:center}
+#quiz .qb button{border:0;border-radius:20px;padding:10px 16px;font-weight:700;font-size:14px;background:#eee}
+#quiz .qb .go{background:var(--ink);color:#fff}
 </style></head><body>
-<header><div class="s" id="hs"></div><h1 id="ht"></h1></header>
+<header><div class="s" id="hs"></div><h1 id="ht"></h1><div id="stars"></div></header>
 <div id="list"></div>
-<p class="hint">문장을 누르면 한 번 들려줘요. <b>역할 놀이</b>를 켜면 내 대사 차례에 소리 없이 멈춰서, 직접 말해 볼 수 있어요.</p>
+<p class="hint">문장을 누르면 한 번 들려줘요.<br><b>역할 놀이</b>: 내 대사 차례에 멈춰서 직접 말해요.<br><b>따라 하기</b>: 켜고 문장을 누르면 듣고 → 내 목소리 녹음 → 내 목소리와 원래 소리를 이어서 들려줘요.<br><b>질문 시간</b>: 상대 말을 듣고 내가 대답해 보는 퀴즈예요.</p>
 <div id="hint"></div><div id="heard"></div>
+<div id="quiz"><div class="card"><div class="qn" id="qn"></div><div class="q" id="qq"></div><div class="qk" id="qk"></div><div class="ak" id="qak"></div><div class="a" id="qa"></div><div class="qb"><button id="qrep">🔁 다시 듣기</button><button class="go" id="qnext">다음 ▶</button><button id="qend">그만</button></div></div></div>
 <div class="bar">
   <button class="big" id="all">▶ 전체 듣기</button>
   <button id="spd">속도 0.85</button>
   <button id="ko">한국어 끄기</button>
   <button id="role">역할 놀이</button>
+  <button id="rep">따라 하기</button>
+  <button id="qz">질문 시간</button>
 </div>
 <script>
 const B = window.BOOK; const T = Object.assign({main:'#22a06b',sub:'#d9f5e6',ink:'#16352a'}, B.theme||{});
@@ -133,28 +149,31 @@ for (const [k,v] of Object.entries(T)) document.documentElement.style.setPropert
 document.getElementById('hs').textContent = `${B.series} · Unit ${B.unitNo}`;
 document.getElementById('ht').textContent = B.unitTitle;
 const strip = s => (s||'').replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&amp;/g,'&');
-const items = []; let html='';
+const items = []; let html=''; let grp=0;
 for (const pg of B.pages) for (const b of pg) {
   if (b.type==='section' && (b.tag)) html += `<div class="sec">${b.tag} · ${strip(b.title)}</div>`;
-  if (b.type==='dialog') { if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
-    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), me:!!l.me});
+  if (b.type==='dialog') { grp++; if (b.scene) html += `<div class="scene">${strip(b.scene)}</div>`;
+    for (const l of b.lines){ const i=items.length; items.push({en:strip(l.en), ko:strip(l.ko), me:!!l.me, g:grp});
       html += `<div class="ln ${l.me?'me':''}" data-i="${i}"><div class="who">${strip(l.who)}</div><div class="tx"><div class="en">${strip(l.en)}</div><div class="ko">${strip(l.ko)}</div></div></div>`; } }
-  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), me:false});
+  if (b.type==='phrases') for (const x of b.items){ const i=items.length; items.push({en:strip(x.en), ko:strip(x.ko), me:false, g:0});
       html += `<div class="ln" data-i="${i}"><div class="tx"><div class="en">${strip(x.en)}</div><div class="ko">${strip(x.ko)}</div>${x.note?`<div class="nt">${strip(x.note)}</div>`:''}</div></div>`; }
 }
 document.getElementById('list').innerHTML = html;
-let rate=0.85, role=false, running=false;
+const LS=(k,v)=>{ try{ if(v===undefined) return JSON.parse(localStorage.getItem('nl_'+k)); localStorage.setItem('nl_'+k, JSON.stringify(v)); }catch(e){ return null; } };
+let rate=LS('rate')||0.75, role=false, running=false, repMode=false;
 const rows=[...document.querySelectorAll('.ln')];
 function voice(){ const vs=speechSynthesis.getVoices(); return vs.find(v=>v.lang==='en-US'&&/Samantha|Google US|Jenny|Aria|Ava|Allison/i.test(v.name))||vs.find(v=>v.lang==='en-US')||vs.find(v=>v.lang.startsWith('en')); }
 function say(i){ return new Promise(res=>{ const it=items[i]; rows.forEach(r=>r.classList.remove('play')); const row=rows[i]; row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
   if (role && it.me){ waitTurn(row,it).then(res); return; }
   const u=new SpeechSynthesisUtterance(it.en); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v;
   u.onend=()=>{row.classList.remove('play');res();}; u.onerror=()=>res(); speechSynthesis.speak(u); }); }
-rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); say(+r.dataset.i); });
+rows.forEach(r=>r.onclick=()=>{ running=false; speechSynthesis.cancel(); if(repMode) repeatRow(+r.dataset.i); else say(+r.dataset.i); });
 document.getElementById('all').onclick=async e=>{ if(running){running=false;speechSynthesis.cancel();e.target.textContent='▶ 전체 듣기';return;}
-  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } running=false; e.target.textContent='▶ 전체 듣기'; };
-document.getElementById('spd').onclick=e=>{ rate = rate===0.85?0.7:rate===0.7?1:0.85; e.target.textContent='속도 '+rate; };
-document.getElementById('ko').onclick=e=>{ document.body.classList.toggle('hideko'); e.target.classList.toggle('on'); e.target.textContent=document.body.classList.contains('hideko')?'한국어 켜기':'한국어 끄기'; };
+  running=true; e.target.textContent='■ 멈춤'; for(let i=0;i<items.length&&running;i++){ await say(i); await new Promise(r=>setTimeout(r,500)); } if(running){ const p=prog(); p.listen=1; saveProg(p); } running=false; e.target.textContent='▶ 전체 듣기'; };
+const SPD=[0.6,0.75,0.9,1], SPN={0.6:'아주 천천히',0.75:'천천히',0.9:'조금 빠르게',1:'보통'};
+const spdB=document.getElementById('spd'); const showSpd=()=>spdB.textContent='속도: '+(SPN[rate]||rate); showSpd();
+spdB.onclick=()=>{ const i=SPD.indexOf(rate); rate=SPD[(i+1)%SPD.length]; LS('rate',rate); showSpd(); };
+const koB=document.getElementById('ko'); const setKo=h=>{ document.body.classList.toggle('hideko',h); koB.classList.toggle('on',h); koB.textContent=h?'한국어 켜기':'한국어 끄기'; LS('hideko',h); }; setKo(!!LS('hideko')); koB.onclick=()=>setKo(!document.body.classList.contains('hideko'));
 document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
 /* 역할 놀이: 서아 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -164,18 +183,75 @@ const tapMsg = '👆 말한 다음 화면을 탭하면 넘어가요';
 function waitTurn(row, it){ return new Promise(res=>{
   let done=false, rec=null, tries=0, heard='';
   const fin=()=>{ if(done) return; done=true; skipFn=null; try{ rec && rec.abort(); }catch(e){} hint.classList.remove('on','mic'); row.classList.remove('play'); setTimeout(()=>{ heardEl.textContent=''; res(); }, 500); };
-  skipFn = fin; heardEl.textContent='';
+  skipFn = fin; heardEl.textContent=''; heardEl.dataset.last='';
   const showTap=()=>{ hint.className='on'; hint.textContent=tapMsg; };
   const start=()=>{ if(done) return; if(srBlocked){ showTap(); return; }
     hint.className='on mic'; hint.textContent='🎤 말해 보세요! 말이 끝나면 넘어가요 (탭하면 바로 넘어가요)';
     rec = new SR(); rec.lang='en-US'; rec.interimResults=true; rec.continuous=false; rec.maxAlternatives=1;
-    rec.onresult=e=>{ heard=[...e.results].map(r=>r[0].transcript).join(' ').trim(); if(heard) heardEl.textContent='🗣 '+heard; };
+    rec.onresult=e=>{ heard=[...e.results].map(r=>r[0].transcript).join(' ').trim(); if(heard){ heardEl.textContent='🗣 '+heard; heardEl.dataset.last=heard; } };
     rec.onerror=e=>{ if(/not-allowed|service-not-allowed|audio-capture|network/.test(e.error)){ srBlocked=true; } };
     rec.onend=()=>{ if(done) return; if(heard){ setTimeout(fin, 700); } else if(!srBlocked && tries<2){ tries++; start(); } else { showTap(); } };
     try{ rec.start(); }catch(e){ srBlocked=true; showTap(); } };
   start();
 }); }
-document.addEventListener('click', e=>{ if(skipFn && !e.target.closest('.bar')){ e.stopPropagation(); e.preventDefault(); skipFn(); } }, true);
+document.addEventListener('click', e=>{ if(skipFn && !e.target.closest('.bar') && !e.target.closest('.qb')){ e.stopPropagation(); e.preventDefault(); skipFn(); } }, true);
 document.getElementById('all').addEventListener('click', ()=>{ if(!running && skipFn) skipFn(); });
+/* 진도 별 */
+const PK='prog_'+(location.pathname.split('/').pop()||'page');
+function prog(){ return LS(PK)||{}; }
+function saveProg(p){ LS(PK,p); drawStars(); }
+function drawStars(){ const p=prog(); const s=[]; if(p.listen) s.push('🎧 전체 듣기 완료'); if(p.rep) s.push('🎙 따라 하기 '+p.rep+'문장'); if(p.quiz!=null) s.push('⭐'.repeat(p.quiz)+'☆'.repeat(Math.max(0,(p.qmax||5)-p.quiz))+' 질문 시간'); document.getElementById('stars').textContent=s.join('  ·  '); }
+drawStars();
+function speakP(text){ return new Promise(res=>{ const u=new SpeechSynthesisUtterance(text); u.lang='en-US'; u.rate=rate; const v=voice(); if(v) u.voice=v; u.onend=res; u.onerror=res; speechSynthesis.speak(u); }); }
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+/* 따라 하기: 듣기 → 녹음 → 내 목소리 → 원래 소리 */
+let micStream=null, recBusy=false, stopRec=null;
+const repB=document.getElementById('rep');
+repB.onclick=()=>{ repMode=!repMode; repB.classList.toggle('on',repMode); if(repMode && role) document.getElementById('role').click(); hint.className=repMode?'on':''; hint.textContent=repMode?'🎙 따라 할 문장을 눌러 보세요':''; if(repMode) setTimeout(()=>{ if(!recBusy) hint.className=''; },2500); };
+async function repeatRow(i){
+  if(recBusy){ stopRec&&stopRec(); return; }
+  if(!navigator.mediaDevices||!window.MediaRecorder){ hint.className='on'; hint.textContent='이 폰에서는 녹음이 안 돼요. 듣고 소리 내어 따라 해 보세요'; await say(i); return; }
+  recBusy=true; const row=rows[i], it=items[i];
+  try{
+    row.classList.add('play'); row.scrollIntoView({block:'center',behavior:'smooth'});
+    hint.className='on'; hint.textContent='👂 잘 들어 보세요'; await speakP(it.en);
+    if(!micStream) micStream=await navigator.mediaDevices.getUserMedia({audio:true});
+    const mr=new MediaRecorder(micStream); const chunks=[]; mr.ondataavailable=e=>e.data.size&&chunks.push(e.data);
+    const stopped=new Promise(r=>mr.onstop=r);
+    row.classList.remove('play'); row.classList.add('rec'); hint.className='on mic'; hint.style.background='#ff4f7b'; hint.textContent='🎙 따라 말해 보세요! (다 말하면 문장을 한 번 더 누르세요)';
+    mr.start(); const words=it.en.split(/\s+/).length; const lim=Math.min(8000, 2500+words*600);
+    await Promise.race([wait(lim), new Promise(r=>stopRec=r)]); stopRec=null; mr.stop(); await stopped; row.classList.remove('rec');
+    hint.style.background=''; hint.className='on'; hint.textContent='🔊 내 목소리';
+    const au=new Audio(URL.createObjectURL(new Blob(chunks,{type:mr.mimeType||'audio/webm'}))); await new Promise(r=>{ au.onended=r; au.onerror=r; au.play().catch(r); });
+    await wait(300); hint.textContent='🔊 원래 소리'; row.classList.add('play'); await speakP(it.en); row.classList.remove('play');
+    const p=prog(); p.rep=(p.rep||0)+1; saveProg(p);
+    hint.textContent='잘했어요! 다른 문장도 눌러 보세요'; setTimeout(()=>{ if(!recBusy) hint.className=''; },2000);
+  }catch(e){ hint.style.background=''; hint.className='on'; hint.textContent='마이크를 쓸 수 없어요. 듣고 소리 내어 따라 해 보세요'; row.classList.remove('rec','play'); }
+  recBusy=false;
+}
+/* 질문 시간: 상대 말 듣기 → 내가 대답 → 정답 듣기 */
+const pairs=[]; for(let i=0;i<items.length-1;i++) if(!items[i].me && items[i+1].me && items[i].g && items[i].g===items[i+1].g) pairs.push(i);
+const qzB=document.getElementById('qz'); if(!pairs.length) qzB.style.display='none';
+const Q={on:false};
+const qEl=id=>document.getElementById(id);
+function qEnd(){ Q.on=false; speechSynthesis.cancel(); if(skipFn) skipFn(); qEl('quiz').classList.remove('on'); hint.className=''; }
+async function qAsk(){
+  const n=Q.k, i=Q.list[n]; const a=items[i+1];
+  qEl('qn').textContent='질문 '+(n+1)+' / '+Q.list.length; qEl('qq').textContent=items[i].en; qEl('qk').textContent=document.body.classList.contains('hideko')?'':items[i].ko;
+  qEl('qak').textContent='내 대답: '+(a.ko||'')+' → 영어로?'; qEl('qa').textContent=''; qEl('qnext').disabled=true;
+  await speakP(items[i].en); if(!Q.on) return;
+  await waitTurn(rows[i+1], a); if(!Q.on) return;
+  const said=(heardEl.dataset.last||'').toLowerCase(), want=a.en.toLowerCase().replace(/[^a-z' ]/g,'');
+  const ws=want.split(' ').filter(w=>w.length>2); const hit=ws.filter(w=>said.includes(w)).length;
+  Q.score += (!said || !ws.length || hit>=Math.ceil(ws.length/2)) ? 1 : 0;
+  qEl('qa').textContent=a.en; await speakP(a.en); qEl('qnext').disabled=false;
+}
+qzB.onclick=()=>{ if(role) document.getElementById('role').click(); if(repMode) repB.click(); running=false; speechSynthesis.cancel();
+  const sh=[...pairs].sort(()=>Math.random()-.5).slice(0,5); Object.assign(Q,{on:true,list:sh,k:0,score:0}); qEl('quiz').classList.add('on'); qAsk(); };
+qEl('qrep').onclick=async e=>{ e.stopPropagation(); speechSynthesis.cancel(); await speakP(items[Q.list[Q.k]].en); };
+qEl('qnext').onclick=e=>{ e.stopPropagation(); Q.k++; if(Q.k<Q.list.length){ qAsk(); return; }
+  const p=prog(); p.quiz=Math.max(p.quiz||0,Q.score); p.qmax=Q.list.length; saveProg(p);
+  qEl('qn').textContent='끝!'; qEl('qq').textContent='⭐'.repeat(Q.score)+'☆'.repeat(Q.list.length-Q.score); qEl('qk').textContent=''; qEl('qak').textContent=Q.score===Q.list.length?'전부 대답했어요! 최고! 🎉':'잘했어요! 한 번 더 하면 별이 늘어요'; qEl('qa').textContent=''; qEl('qnext').disabled=true; };
+qEl('qend').onclick=e=>{ e.stopPropagation(); qEnd(); };
 speechSynthesis.getVoices();
 </script></body></html>
