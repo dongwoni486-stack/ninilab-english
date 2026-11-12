@@ -76,7 +76,7 @@ window.BOOK = {
             steps: ['Does the school ~? = 학교가 ~하나요?', '제공 여부를 묻는 동사: offer', 'offer 뒤에 프로그램 이름: ESL support'],
             mistake: 'Does 뒤에는 동사 원형이라 offers가 아니라 offer예요.',
             more: '"Does the school offer after-school care?(방과 후 돌봄이 있나요?)"로 응용해요.' } },
-        { label: '연습 4', level: '중', question: '결석 이메일 한 줄을 완성하세요.<br><span class="en" style="font-size:15px;font-weight:800">Hello, Ms. Brown. Seoah will be ________ tomorrow.</span>', lines: 1, answer: 'absent',
+        { label: '연습 4', level: '중', question: '결석 이메일 한 줄을 완성하세요.<br><span class="en" style="font-size:15px;font-weight:800">Hello, Ms. Brown. Mina will be ________ tomorrow.</span>', lines: 1, answer: 'absent',
           sol: { read: '아이가 내일 "결석한다"는 뜻의 단어를 이메일 문장 빈칸에 쓰는 문제예요.', idea: 'absent = 결석한. "be absent"로 "결석하다"를 표현해요.',
             steps: ['will be + 상태 = ~일 거예요', '결석한 상태: absent', '이유를 덧붙이면: She has a fever.'],
             check: '이메일 끝에 "Thank you!"를 붙이면 공손해요. 이름과 반 이름도 쓰는 것이 좋아요.',
@@ -86,10 +86,10 @@ window.BOOK = {
         answer: '(활동)', sol: { idea: '면담은 짧고 명확한 질문 두세 개만 준비해도 충분해요. 소리 내어 연습하면 실전에서 훨씬 덜 떨려요.', steps: ['처음엔 책을 보며 읽기', '두 번째부터는 내 대사를 가리고 말하기', '선생님 역은 질문 순서를 바꿔서 해 보기'], parent: '통역 앱을 준비해 가도 괜찮아요. 하지만 인사와 핵심 질문은 직접 말하면 인상이 달라져요.' } },
       { type: 'stage', n: 4 },
       { type: 'card', label: '내 상황에 맞게 바꿔 쓰기', level: '상', title: '', question: '우리 아이 상황에 맞게 빈칸을 채워 소리 내어 읽어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">Hi, I\'m ______________\'s mom.<br>She is in grade ______.<br>She ______________ English.<br>Could you tell me about ______________?</span>',
-        answer: `(예) Hi, I'm Seoah's mom. She is in grade 3. She is just starting to learn English. Could you tell me about ESL support?`,
+        answer: `(예) Hi, I'm Mina's mom. She is in grade 3. She is just starting to learn English. Could you tell me about ESL support?`,
         sol: { idea: '아이 소개 → 학년 → 영어 수준 → 궁금한 점 순서로 말하면 짧아도 필요한 정보가 다 전달돼요.',
           steps: ["I'm + 아이 이름's mom", 'She/He is in grade + 숫자', '영어 수준: is just starting to learn / understands more than she speaks', 'Could you tell me about + 궁금한 것?'],
-          mistake: '"I\'m Seoah\'s mom."이지 "I\'m mom of Seoah."라고 하지 않아요.',
+          mistake: '"I\'m Mina\'s mom."이지 "I\'m mom of Mina."라고 하지 않아요.',
           more: '아빠라면 mom 대신 dad를 쓰면 돼요. 학년은 미국식(grade 3)으로 말해요.' } }
     ]
   ]
@@ -179,7 +179,7 @@ const spdB=document.getElementById('spd'); const showSpd=()=>spdB.textContent='�
 spdB.onclick=()=>{ const i=SPD.indexOf(rate); rate=SPD[(i+1)%SPD.length]; LS('rate',rate); showSpd(); };
 const koB=document.getElementById('ko'); const setKo=h=>{ document.body.classList.toggle('hideko',h); koB.classList.toggle('on',h); koB.textContent=h?'한국어 켜기':'한국어 끄기'; LS('hideko',h); }; setKo(!!LS('hideko')); koB.onclick=()=>setKo(!document.body.classList.contains('hideko'));
 document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
-/* 역할 놀이: 서아 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
+/* 역할 놀이: 내 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 let srBlocked = !SR, skipFn = null;
 const hint = document.getElementById('hint'), heardEl = document.getElementById('heard');

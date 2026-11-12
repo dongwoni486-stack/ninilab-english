@@ -4,7 +4,7 @@
 <title>니니랩 English 듣기</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 <script>// 니니랩 English · 미국 학교 첫걸음 / Unit 6 Numbers, Time & Days · 단어 익히기 + 단어 테스트
-const KID = 'Seoah';
+const KID = 'Mina';
 const big = s => '<span class="en say" style="font-size:15px;font-weight:800">' + s + '</span>';
 window.BOOK = {
   subject: 'english',
@@ -24,7 +24,7 @@ window.BOOK = {
         { en: 'minute', ko: '1분', note: 'Wait five minutes. (5분 기다려.)' },
         { en: 'half past', ko: '~시 30분', note: "It's half past ten. (10시 반이야.)" },
         { en: 'weekend', ko: '주말', note: 'See you after the weekend! (주말 뒤에 봐!)' },
-        { en: 'early', ko: '일찍, 이른', note: KID + ' came early. (서아가 일찍 왔어.)' },
+        { en: 'early', ko: '일찍, 이른', note: KID + ' came early. (미나가 일찍 왔어.)' },
         { en: 'late', ko: '늦은, 늦게', note: "Don't be late! (늦지 마!)" },
         { en: 'add', ko: '더하다', note: 'Add 3 and 4. (3과 4를 더해.)' },
         { en: 'subtract', ko: '빼다', note: 'Subtract 2 from 9. (9에서 2를 빼.)' },
@@ -163,7 +163,7 @@ const spdB=document.getElementById('spd'); const showSpd=()=>spdB.textContent='�
 spdB.onclick=()=>{ const i=SPD.indexOf(rate); rate=SPD[(i+1)%SPD.length]; LS('rate',rate); showSpd(); };
 const koB=document.getElementById('ko'); const setKo=h=>{ document.body.classList.toggle('hideko',h); koB.classList.toggle('on',h); koB.textContent=h?'한국어 켜기':'한국어 끄기'; LS('hideko',h); }; setKo(!!LS('hideko')); koB.onclick=()=>setKo(!document.body.classList.contains('hideko'));
 document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
-/* 역할 놀이: 서아 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
+/* 역할 놀이: 내 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 let srBlocked = !SR, skipFn = null;
 const hint = document.getElementById('hint'), heardEl = document.getElementById('heard');

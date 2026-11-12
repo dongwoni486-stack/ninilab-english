@@ -4,7 +4,7 @@
 <title>니니랩 English 듣기</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 <script>// 니니랩 English · 미국 학교 생존 회화 / Unit 4 Lunch Time
-const KID = 'Seoah';
+const KID = 'Mina';
 const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
 window.BOOK = {
   subject: 'english',
@@ -19,7 +19,7 @@ window.BOOK = {
       { type: 'stage', n: 1 },
       { type: 'section', tag: 'Talk', title: '급식실에서 메뉴 고르기' },
       { type: 'listen' },
-      { type: 'dialog', scene: '점심시간. 서아가 줄을 서서 급식을 받아요.', lines: [
+      { type: 'dialog', scene: '점심시간. 미나가 줄을 서서 급식을 받아요.', lines: [
         { who: 'Cafeteria Lady', en: 'Hi, sweetheart. What would you like today?', ko: '안녕, 아가야. 오늘은 뭐 먹을래?' },
         { who: KID, me: true, en: 'Chicken nuggets, please.', ko: '치킨 너겟 주세요.' },
         { who: 'Cafeteria Lady', en: 'Do you want corn or green beans?', ko: '옥수수 줄까, 껍질콩 줄까?' },
@@ -175,7 +175,7 @@ const spdB=document.getElementById('spd'); const showSpd=()=>spdB.textContent='�
 spdB.onclick=()=>{ const i=SPD.indexOf(rate); rate=SPD[(i+1)%SPD.length]; LS('rate',rate); showSpd(); };
 const koB=document.getElementById('ko'); const setKo=h=>{ document.body.classList.toggle('hideko',h); koB.classList.toggle('on',h); koB.textContent=h?'한국어 켜기':'한국어 끄기'; LS('hideko',h); }; setKo(!!LS('hideko')); koB.onclick=()=>setKo(!document.body.classList.contains('hideko'));
 document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
-/* 역할 놀이: 서아 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
+/* 역할 놀이: 내 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 let srBlocked = !SR, skipFn = null;
 const hint = document.getElementById('hint'), heardEl = document.getElementById('heard');

@@ -4,7 +4,7 @@
 <title>니니랩 English 듣기</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 <script>// 니니랩 English · 미국 학교 생존 회화 / Unit 3 Bathroom, Water & Nurse · 단어 익히기 + 단어 테스트
-const KID = 'Seoah';
+const KID = 'Mina';
 window.BOOK = {
   subject: 'english',
   brand: ['니니', '랩', 'English'],
@@ -24,7 +24,7 @@ window.BOOK = {
         { en: 'fever', ko: '열', note: 'I think I have a fever. (열이 나는 것 같아요.)' },
         { en: 'cough', ko: '기침(하다)', note: 'Cover your mouth when you cough. (기침할 땐 입을 가려요.)' },
         { en: 'tissue', ko: '휴지(티슈)', note: 'Can I have a tissue? (휴지 하나 주세요.)' },
-        { en: 'ice pack', ko: '얼음찜질 팩', note: KID + ' got an ice pack. (서아가 얼음팩을 받았어요.)' },
+        { en: 'ice pack', ko: '얼음찜질 팩', note: KID + ' got an ice pack. (미나가 얼음팩을 받았어요.)' },
         { en: 'bandage', ko: '반창고', note: 'Put a bandage on it. (반창고를 붙여요.)' },
         { en: 'underline', ko: '밑줄을 긋다', note: 'Underline the main idea. (중심 내용에 밑줄 쳐요.)' },
         { en: 'dizzy', ko: '어지러운', note: 'I feel dizzy. (어지러워요.)' },
@@ -158,7 +158,7 @@ const spdB=document.getElementById('spd'); const showSpd=()=>spdB.textContent='�
 spdB.onclick=()=>{ const i=SPD.indexOf(rate); rate=SPD[(i+1)%SPD.length]; LS('rate',rate); showSpd(); };
 const koB=document.getElementById('ko'); const setKo=h=>{ document.body.classList.toggle('hideko',h); koB.classList.toggle('on',h); koB.textContent=h?'한국어 켜기':'한국어 끄기'; LS('hideko',h); }; setKo(!!LS('hideko')); koB.onclick=()=>setKo(!document.body.classList.contains('hideko'));
 document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
-/* 역할 놀이: 서아 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
+/* 역할 놀이: 내 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 let srBlocked = !SR, skipFn = null;
 const hint = document.getElementById('hint'), heardEl = document.getElementById('heard');

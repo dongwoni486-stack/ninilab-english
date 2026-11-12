@@ -4,7 +4,7 @@
 <title>니니랩 English 듣기</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 <script>// 니니랩 English · 미국 학교 생존 회화 / Unit 12 American School Life · 단어 익히기 + 단어 테스트
-const KID = 'Seoah';
+const KID = 'Mina';
 window.BOOK = {
   subject: 'english',
   brand: ['니니', '랩', 'English'],
@@ -28,7 +28,7 @@ window.BOOK = {
         { en: 'spirit week', ko: '응원 주간 (학교 행사 주간)', note: 'Spirit week is fun! (스피릿 위크는 재미있어요!)' },
         { en: 'yearbook', ko: '졸업앨범, 학교 앨범', note: 'Sign my yearbook. (내 학교 앨범에 사인해 줘요.)' },
         { en: 'talent show', ko: '장기자랑', note: 'I sing in the talent show. (장기자랑에서 노래해요.)' },
-        { en: 'compare', ko: '비교하다', note: KID + ' can compare numbers. (서아는 수를 비교할 수 있어요)' }
+        { en: 'compare', ko: '비교하다', note: KID + ' can compare numbers. (미나는 수를 비교할 수 있어요)' }
       ] }
     ],
     [
@@ -161,7 +161,7 @@ const spdB=document.getElementById('spd'); const showSpd=()=>spdB.textContent='�
 spdB.onclick=()=>{ const i=SPD.indexOf(rate); rate=SPD[(i+1)%SPD.length]; LS('rate',rate); showSpd(); };
 const koB=document.getElementById('ko'); const setKo=h=>{ document.body.classList.toggle('hideko',h); koB.classList.toggle('on',h); koB.textContent=h?'한국어 켜기':'한국어 끄기'; LS('hideko',h); }; setKo(!!LS('hideko')); koB.onclick=()=>setKo(!document.body.classList.contains('hideko'));
 document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
-/* 역할 놀이: 서아 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
+/* 역할 놀이: 내 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 let srBlocked = !SR, skipFn = null;
 const hint = document.getElementById('hint'), heardEl = document.getElementById('heard');

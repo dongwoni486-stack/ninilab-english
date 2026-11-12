@@ -27,7 +27,7 @@ window.BOOK = {
         { who: 'Clinic', en: 'Sure. Is this for you or your child?', ko: '네. 본인이세요, 아이세요?' },
         { who: ME, me: true, en: "It's for my daughter. She has a fever.", ko: '딸이에요. 열이 있어요.' },
         { who: 'Clinic', en: 'Can I have her name and date of birth?', ko: '이름과 생년월일을 알려 주시겠어요?' },
-        { who: ME, me: true, en: "Her name is Seoah. It's April 9th, 2018.", ko: '이름은 서아예요. 2018년 4월 9일이에요.' },
+        { who: ME, me: true, en: "Her name is Mina. It's April 9th, 2018.", ko: '이름은 미나예요. 2018년 4월 9일이에요.' },
         { who: 'Clinic', en: 'Thanks. Do you have insurance?', ko: '감사합니다. 보험 있으세요?' } ] },
       { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
       { type: 'phrases', items: [
@@ -50,7 +50,7 @@ window.BOOK = {
       { type: 'section', tag: 'Pharmacy', title: '약국에서 약 받기' },
       { type: 'phrases', items: [
         { en: "I'm here to pick up a prescription.", ko: '처방약을 받으러 왔어요.', note: 'prescription = 처방전/처방약' },
-        { en: 'Her name is Seoah Choi.', ko: '이름은 최서아예요.', note: '처방은 이름·생년월일로 확인하는 경우가 많아요.' },
+        { en: 'Her name is Mina Kim.', ko: '이름은 김미나예요.', note: '처방은 이름·생년월일로 확인하는 경우가 많아요.' },
         { en: 'How often should she take it?', ko: '얼마나 자주 먹여야 하나요?', note: '복용법은 약사에게 꼭 확인해요.' },
         { en: 'Are there any side effects?', ko: '부작용이 있나요?', note: '' } ] },
       { type: 'grid', items: [
@@ -179,7 +179,7 @@ const spdB=document.getElementById('spd'); const showSpd=()=>spdB.textContent='�
 spdB.onclick=()=>{ const i=SPD.indexOf(rate); rate=SPD[(i+1)%SPD.length]; LS('rate',rate); showSpd(); };
 const koB=document.getElementById('ko'); const setKo=h=>{ document.body.classList.toggle('hideko',h); koB.classList.toggle('on',h); koB.textContent=h?'한국어 켜기':'한국어 끄기'; LS('hideko',h); }; setKo(!!LS('hideko')); koB.onclick=()=>setKo(!document.body.classList.contains('hideko'));
 document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
-/* 역할 놀이: 서아 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
+/* 역할 놀이: 내 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 let srBlocked = !SR, skipFn = null;
 const hint = document.getElementById('hint'), heardEl = document.getElementById('heard');

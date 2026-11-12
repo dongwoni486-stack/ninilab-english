@@ -4,7 +4,7 @@
 <title>니니랩 English 듣기</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 <script>// 니니랩 English · 미국 학교 생존 회화 / Unit 12 American School Life (미국 학교 문화)
-const KID = 'Seoah';
+const KID = 'Mina';
 const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
 window.BOOK = {
   subject: 'english',
@@ -68,7 +68,7 @@ window.BOOK = {
     [
       { type: 'stage', n: 3 },
       { type: 'grid', items: [
-        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Teacher: Are you ready, Seoah?<br>You: Yes, ________.</span><br><span style="font-size:12px">(뜻: 선생님: 준비됐니, 서아? 나: 네, 선생님.)</span>', lines: 2, answer: "ma'am",
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Teacher: Are you ready, Mina?<br>You: Yes, ________.</span><br><span style="font-size:12px">(뜻: 선생님: 준비됐니, 미나? 나: 네, 선생님.)</span>', lines: 2, answer: "ma'am",
           sol: { idea: "여성 선생님께 공손하게 대답할 때 Yes, ma'am.을 써요. 남성에게는 sir.",
             steps: ['여성 어른 → ma\'am', '남성 어른 → sir'],
             check: '앨라배마에서는 흔하지만, 안 써도 무례한 건 아니에요.' } },
@@ -174,7 +174,7 @@ const spdB=document.getElementById('spd'); const showSpd=()=>spdB.textContent='�
 spdB.onclick=()=>{ const i=SPD.indexOf(rate); rate=SPD[(i+1)%SPD.length]; LS('rate',rate); showSpd(); };
 const koB=document.getElementById('ko'); const setKo=h=>{ document.body.classList.toggle('hideko',h); koB.classList.toggle('on',h); koB.textContent=h?'한국어 켜기':'한국어 끄기'; LS('hideko',h); }; setKo(!!LS('hideko')); koB.onclick=()=>setKo(!document.body.classList.contains('hideko'));
 document.getElementById('role').onclick=e=>{ role=!role; e.target.classList.toggle('on',role); rows.forEach(r=>{ const it=items[+r.dataset.i]; r.classList.toggle('mute', role&&it.me); }); };
-/* 역할 놀이: 서아 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
+/* 역할 놀이: 내 차례 → 마이크로 듣고 말이 끝나면 넘어감, 마이크가 안 되면 탭으로 넘어감 */
 const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 let srBlocked = !SR, skipFn = null;
 const hint = document.getElementById('hint'), heardEl = document.getElementById('heard');
