@@ -25,7 +25,7 @@ window.BOOK = {
         { who: KID, me: true, en: 'What do I do?', ko: '나는 뭘 해야 해?' },
         { who: 'Emma', en: 'You can just stand with us.', ko: '그냥 같이 서 있어도 돼.' },
         { who: 'Ms. Brown', en: 'Tomorrow is Pajama Day!', ko: '내일은 잠옷 입는 날이에요!' },
-        { who: KID, me: true, en: 'Really? That sounds fun!', ko: '정말요? 재미있겠다!' },
+        { who: KID, me: true, en: 'Really? That sounds fun!', ko: '정말요? 재미있겠어요!' },
         { who: 'Ms. Brown', en: 'Yes! Wear your pajamas to school.', ko: '그래요! 잠옷 입고 학교에 오세요.' } ] },
       { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
       { type: 'phrases', items: [
@@ -33,30 +33,30 @@ window.BOOK = {
         { en: 'What do I do?', ko: '나는 뭘 하면 돼요?', note: '모르는 행사에서 유용해요.' },
         { en: 'Tomorrow is Pajama Day.', ko: '내일은 잠옷의 날이에요.', note: 'Spirit Week 중 하나인 경우가 많아요.' },
         { en: 'That sounds fun!', ko: '재미있겠다!', note: '' } ] },
-      { type: 'tip', pose: 'idea', text: '<b>Pledge of Allegiance</b>는 국기에 하는 맹세예요. 참여가 의무가 아닌 경우가 많아요. 불편하면 조용히 서 있어도 돼요. 방침은 선생님께 물어보세요.' }
+      { type: 'tip', pose: 'idea', text: '<b>Pledge of Allegiance</b>는 국기에 대한 맹세야. 하고 싶지 않으면 안 해도 돼. 조용히 서 있거나 앉아 있으면 돼. 하는 방식은 학교마다 달라서, 궁금하면 선생님께 물어봐!' }
     ],
     [
-      { type: 'stage', n: 1 },
+      { type: 'stage', n: 2 },
       { type: 'section', tag: 'Events', title: '학교 행사 영어' },
       { type: 'phrases', items: [
-        { en: "It's my turn for show and tell.", ko: '내가 show and tell 할 차례예요.', note: '좋아하는 물건을 가져와 소개해요.' },
+        { en: "It's my turn for show and tell.", ko: '내가 show and tell 할 차례예요.', note: '물건 소개 발표. 저학년에서 많이 해요.' },
         { en: 'This is my favorite toy.', ko: '이건 내가 제일 좋아하는 장난감이에요.', note: 'show and tell 첫 문장으로 좋아요.' },
-        { en: 'I need a permission slip.', ko: '허락서가 필요해요.', note: '현장학습엔 부모님 서명이 필요한 경우가 많아요.' },
+        { en: 'I forgot my permission slip.', ko: '참가 동의서를 깜빡했어요.', note: '현장학습엔 부모님 서명이 필요한 경우가 많아요.' },
         { en: 'We have a field trip.', ko: '우리 현장학습 가요.', note: 'field trip = 소풍·견학' },
         { en: 'It\'s Spirit Week.', ko: '스피릿 위크예요.', note: '매일 다른 테마로 입는 주간' },
-        { en: 'I got my report card.', ko: '성적표를 받았어요.', note: '학기마다 집에 보내는 경우가 많아요.' } ] },
+        { en: 'I got my report card.', ko: '성적표를 받았어요.', note: '보통 9주쑤마다 받아요. 학교마다 달라요.' } ] },
       { type: 'section', tag: 'Polite', title: '남부 예절 가볍게 배우기' },
       { type: 'phrases', items: [
-        { en: "Yes, ma'am.", ko: '네. (여성 어른에게)', note: '앨라배마에서 자주 들려요.' },
+        { en: "Yes, ma'am.", ko: '네. (여성 어른에게)', note: '미국 남부에서 자주 들려요.' },
         { en: 'Yes, sir.', ko: '네. (남성에게)', note: '어른에게 공손하게' },
         { en: 'Thank you, y\'all!', ko: '모두 고마워요!', note: 'y\'all = you all (남부식)' },
         { en: 'Excuse me.', ko: '실례합니다.', note: '지나갈 때, 말 걸 때' } ] },
       { type: 'grid', items: [
         { label: '연습 1', level: '하', question: '현장학습 때 부모님이 서명하는 경우가 많은 종이는?',
           choices: ['report card', 'permission slip', 'lost and found'], answer: '②', lines: 0,
-          sol: { idea: 'permission = 허락, slip = 작은 종이. 그래서 "허락서"예요.',
+          sol: { idea: 'permission = 허락, slip = 작은 종이. 그래서 "(부모님) 참가 동의서"예요.',
             steps: ['현장학습 = field trip', '부모님 허락 = permission slip'],
-            mistake: 'report card는 성적표예요. 서명이 필요할 수는 있지만 허락서는 아니에요.',
+            mistake: 'report card는 성적표예요. 서명이 필요할 수는 있지만 동의서는 아니에요.',
             parent: '안내문이 오면 날짜를 함께 확인해 주세요.' } },
         { label: '연습 2', level: '하', question: '선생님이 "Please stand up."이라고 하면 뭘 해야 할까요?',
           choices: ['앉기', '일어서기', '손 씻기'], answer: '②', lines: 0,
@@ -68,10 +68,10 @@ window.BOOK = {
     [
       { type: 'stage', n: 3 },
       { type: 'grid', items: [
-        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Teacher: Are you ready, Mina?<br>You: Yes, ________.</span><br><span style="font-size:12px">(뜻: 선생님: 준비됐니, 미나? 나: 네, 선생님.)</span>', lines: 2, answer: "ma'am",
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Ms. Brown: Are you ready?<br>You: Yes, ________.</span><br><span style="font-size:12px">(여자 선생님께 공손하게 · m으로 시작)</span>', lines: 2, answer: "ma'am",
           sol: { idea: "여성 선생님께 공손하게 대답할 때 Yes, ma'am.을 써요. 남성에게는 sir.",
-            steps: ['여성 어른 → ma\'am', '남성 어른 → sir'],
-            check: '앨라배마에서는 흔하지만, 안 써도 무례한 건 아니에요.' } },
+            steps: ['Ms. = 여성 선생님 → ma\'am', '남성 어른 → sir'],
+            check: '"Yes, I am."도 자연스러운 대답이에요. 여기서는 m으로 시작하는 공손한 말을 연습해요. 미국 남부에서는 흔하지만, 안 써도 무례한 건 아니에요.' } },
         { label: '연습 4', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">We have a field ________ tomorrow.</span><br><span style="font-size:12px">(뜻: 우리 내일 현장학습 가요.)</span>', lines: 2, answer: 'trip',
           sol: { idea: 'field trip = 학교 밖으로 나가는 현장학습이에요.',
             steps: ['field = 현장', 'trip = 여행·나들이 → 현장학습'],

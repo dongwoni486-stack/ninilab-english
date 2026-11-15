@@ -18,7 +18,7 @@ window.BOOK = {
       { type: 'listen' },
       { type: 'phrases', items: [
         { en: 'bus stop', ko: '버스 정류장', note: 'Wait at the bus stop. (정류장에서 기다려요.)' },
-        { en: 'bus driver', ko: '버스 기사님', note: KID + ' says hi to the bus driver. (기사님께 인사해요.)' },
+        { en: 'bus driver', ko: '버스 기사님', note: KID + ' says hi to the bus driver. (' + KID + '가 기사님께 인사해요.)' },
         { en: 'car line', ko: '차로 데리러 오는 줄', note: 'Mom is in the car line. (엄마 차가 픽업 줄에 있어요.)' },
         { en: 'pick up', ko: '데리러 오다', note: 'Dad will pick me up. (아빠가 나를 데리러 올 거예요.)' },
         { en: 'dismissal', ko: '하교 (시간)', note: 'Dismissal is at 3:00. (하교는 3시예요.)' },
@@ -26,7 +26,7 @@ window.BOOK = {
         { en: 'crosswalk', ko: '횡단보도', note: 'Cross at the crosswalk. (횡단보도로 건너요.)' },
         { en: 'address', ko: '주소', note: 'I know my address. (내 주소를 알아요.)' },
         { en: 'homework', ko: '숙제', note: 'Do your homework. (숙제를 해요.)' },
-        { en: 'seat belt', ko: '안전벨트', note: 'Buckle your seat belt. (안전벨트를 매요.)' },
+        { en: 'seat belt', ko: '안전벨트', note: 'Buckle your seat belt in the car. (차에서는 안전벨트를 매요.)' },
         { en: 'bus number', ko: '버스 번호', note: 'My bus number is twelve. (내 버스 번호는 12번이에요.)' },
         { en: 'aisle', ko: '(버스) 통로', note: 'Do not run in the aisle. (통로에서 뛰지 마요.)' } ] }
     ],
@@ -34,10 +34,10 @@ window.BOOK = {
       { type: 'section', tag: 'Check', title: '단어 테스트' },
       { type: 'grid', items: [
         { label: 'Word 1', level: '하', question: '<span class="en" style="font-size:15px;font-weight:800">dismissal</span>의 뜻을 고르세요.',
-          choices: ['하교 시간', '점심 시간', '쉬는 시간'], answer: '①', lines: 0,
+          choices: ['하교 시간', '점심 시간', '놀이 시간'], answer: '①', lines: 0,
           sol: { idea: 'dismiss = 보내 주다. 학생들을 집으로 보내 주는 시간이 dismissal이에요.',
             steps: ['dismiss(보내 주다) + -al → dismissal', '학교에서는 "수업 끝, 집에 가는 시간"'],
-            mistake: '점심 시간은 lunch, 쉬는 시간은 recess예요.' } },
+            mistake: '점심 시간은 lunch, (바깥) 놀이 시간은 recess예요.' } },
         { label: 'Word 2', level: '하', question: '<span class="en" style="font-size:15px;font-weight:800">crossing guard</span>의 뜻을 고르세요.',
           choices: ['버스 기사님', '교통 안전 도우미', '급식 선생님'], answer: '②', lines: 0,
           sol: { idea: 'crossing(건너기) + guard(지키는 사람) = 길 건너기를 지켜 주는 사람이에요.',
@@ -56,11 +56,12 @@ window.BOOK = {
           sol: { idea: 'cross(건너다) + walk(걷다) = 걸어서 건너는 곳, 횡단보도예요.',
             steps: ['문장 뜻: 길을 건너려면 ___로 걸어요.', '길 위의 장소 = crosswalk'],
             mistake: 'bus number는 버스 번호, aisle은 버스 안 통로라서 길 건너는 장소가 아니에요.' } },
-        { label: 'Word 6', level: '중', question: '알맞은 단어를 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">The bus is moving. Please buckle your ________.</span>',
+        { label: 'Word 6', level: '중', question: '알맞은 단어를 고르세요.<br><span class="en" style="font-size:15px;font-weight:800">The car is moving. Please buckle your ________.</span>',
           choices: ['crosswalk', 'seat belt', 'address'], answer: '②', lines: 0,
           sol: { idea: '차 안에서 몸을 고정하는 띠는 seat belt(안전벨트)예요. buckle은 "버클을 채우다"예요.',
             steps: ['buckle your ~ = ~를 채우다', '자리(seat)에 매는 띠(belt)', '→ seat belt'],
-            mistake: 'crosswalk는 횡단보도, address는 주소라서 버스 안에서 채우는 것이 아니에요.' } }
+            mistake: 'crosswalk는 횡단보도, address는 주소라서 차 안에서 채우는 것이 아니에요.',
+            check: '큰 스쿨버스에는 안전벨트가 없는 경우가 많아요. 있는 버스라면 꼭 매요(학교 안내 확인).' } }
       ] },
       { type: 'card', label: '문장 만들기', level: '상', title: '', question: '<span class="en" style="font-size:15px;font-weight:800">bus driver</span>와 <span class="en" style="font-size:15px;font-weight:800">bus stop</span>을 넣어 나만의 문장을 써 보세요.', lines: 2,
         answer: '(예) The bus driver stops at my bus stop. / I say hi to the bus driver at the bus stop.',

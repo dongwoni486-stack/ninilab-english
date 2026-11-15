@@ -23,7 +23,7 @@ window.BOOK = {
       { type: 'dialog', scene: '아파트 leasing office. 직원 Jessica와 대화해요.', lines: [
         { who: 'Jessica', en: 'Hi there! How can I help you?', ko: '안녕하세요! 무엇을 도와드릴까요?' },
         { who: ME, me: true, en: "Hi. I'm in unit 204. The AC isn't working.", ko: '204호예요. 에어컨이 작동하지 않아요.' },
-        { who: 'Jessica', en: "I'm sorry about that. Since when?", ko: '불편하시겠네요. 언제부터요?' },
+        { who: 'Jessica', en: "I'm sorry about that. When did it start?", ko: '불편하시겠네요. 언제부터 그랬어요?' },
         { who: ME, me: true, en: 'Since last night. Can you send someone to fix it?', ko: '어젯밤부터요. 수리해 줄 사람을 보내 주실 수 있나요?' },
         { who: 'Jessica', en: "Sure. I'll put in a maintenance request.", ko: '네. 수리 요청을 접수해 드릴게요.' },
         { who: ME, me: true, en: 'Is it okay if I\'m not home?', ko: '제가 집에 없어도 괜찮을까요?' },
@@ -37,7 +37,7 @@ window.BOOK = {
       { type: 'tip', pose: 'idea', text: '<b>maintenance request</b>는 수리 요청서예요. 급한 고장(누수, 난방 등)은 emergency 연락처가 따로 있는 경우가 많으니 입주 때 확인해 두세요.' }
     ],
     [
-      { type: 'stage', n: 1 },
+      { type: 'stage', n: 2 },
       { type: 'section', tag: 'Repair', title: '고장·불편 신고하기' },
       { type: 'phrases', items: [
         { en: "The sink is leaking.", ko: '싱크대에서 물이 새요.', note: 'leak = 새다' },
@@ -48,7 +48,7 @@ window.BOOK = {
         { en: "I'd like to report a problem.", ko: '문제를 신고하고 싶어요.', note: '공손하게 시작하는 첫 문장' } ] },
       { type: 'section', tag: 'Neighbors', title: '이웃 인사와 택배' },
       { type: 'phrases', items: [
-        { en: 'Hi! How y\'all doing?', ko: '안녕하세요! 다들 잘 지내세요?', note: "y'all = you all, 남부식 인사로 친근해요" },
+        { en: 'Hi! How y\'all doing?', ko: '안녕하세요! 다들 잘 지내세요?', note: "(듣기용) y'all = you all. 남부식 인사, 알아듣기만 해도 OK" },
         { en: "We just moved in.", ko: '저희 막 이사 왔어요.', note: '이웃에게 자기소개할 때' },
         { en: 'I think I got your package.', ko: '제가 댁 택배를 받은 것 같아요.', note: '잘못 배달된 택배를 전할 때' },
         { en: 'Did a package come for me?', ko: '제 앞으로 택배가 왔나요?', note: 'leasing office에 맡기는 경우도 있어요' } ] },
@@ -58,11 +58,11 @@ window.BOOK = {
           sol: { read: '물이 새는 상황에 맞는 문장을 골라요.', idea: 'leak = 새다. 문제 대상 + is leaking으로 말하면 신고 문장이 완성돼요.',
             steps: ['sink = 싱크대', 'is leaking = 새고 있다', '②는 전등, ③은 온수 문제'], check: '그림으로 상상하면 ①이 물이 새는 장면과 가장 가까워요.',
             parent: '집 안 물건 하나를 골라 "The ___ is leaking/isn\'t working."로 말해 보세요.' } },
-        { label: '연습 2', level: '하', question: "이웃에게 친근하게 남부식으로 인사하는 말은?",
+        { label: '연습 2', level: '하', question: "이웃이 친근하게 건네는 남부식 인사는?",
           choices: ['Where is the office?', "Hi! How y'all doing?", 'I need a refund.'], answer: '②', lines: 0,
-          sol: { read: '남부식 인사를 찾는 문제예요.', idea: "y'all은 you all의 줄임말이고 앨라배마 같은 남부에서 흔히 들려요. 여러 사람에게 인사할 때 아주 자연스러워요.",
+          sol: { read: '남부식 인사를 찾는 문제예요.', idea: "y'all은 you all의 줄임말이고 미국 남부에서 흔히 들려요. 여러 사람에게 인사할 때 아주 자연스러워요.",
             steps: ['How are you? 계열의 인사 찾기', "How y'all doing? = 다들 어떻게 지내요?"],
-            more: "한 사람에게는 How are you doing?, 가족 전체에겐 How y'all doing?을 쓸 수 있어요. 억지로 따라 하기보다 들었을 때 알아듣는 게 먼저예요." } }
+            more: "내가 인사할 때는 'Hi, how are you?'면 충분해요. y'all은 억지로 따라 하기보다 들었을 때 알아듣는 게 먼저예요." } }
       ] }
     ],
     [
@@ -77,14 +77,14 @@ window.BOOK = {
             steps: ['I think I ~ = ~한 것 같아요', 'got your package = 당신 택배를 받았다'],
             check: 'parcel은 영국식이고 미국에서는 package를 훨씬 많이 써요.' } }
       ] },
-      { type: 'card', label: '실전 롤플레이', level: '중', title: '배우자와 이사 첫 주 연습하기', question: '한 사람은 leasing office 직원 또는 이웃, 한 사람은 나를 맡아 보세요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ The AC isn\'t working. □ We just moved in. □ How y\'all doing? □ Did a package come for me?',
+      { type: 'card', label: '실전 롤플레이', level: '중', title: '배우자와 이사 첫 주 연습하기', question: '한 사람은 leasing office 직원 또는 이웃, 한 사람은 나를 맡아 보세요. 한 번 할 때마다 ○에 색칠해요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ The AC isn\'t working. □ We just moved in. □ Hi, how are you? □ Did a package come for me?',
         answer: '(활동)', sol: { idea: '고장 신고, 인사, 택배 확인은 입주 첫 주에 거의 확실히 쓰는 세 장면이에요. 역할을 바꿔 하면 듣기와 말하기가 같이 늘어요.', steps: ['고장 신고 먼저', '이웃 인사 이어서', '마지막에 택배 문의까지 연결'], parent: '배우자가 가끔 못 알아들은 척하며 Sorry?라고 하면 다시 말하기 연습이 돼요.' } },
       { type: 'stage', n: 4 },
       { type: 'card', label: '내 상황에 맞게 바꿔 쓰기', level: '상', title: '', question: '우리 집 상황에 맞게 빈칸을 채워 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">The ______________ isn\'t working.<br>It has been broken since ______________.<br>Can you send someone ______________?<br>Hi! We just moved into unit ______.</span>',
-        answer: "(예) The dryer isn't working. It has been broken since yesterday. Can you send someone this week?",
+        answer: "(예) The dryer isn't working. It has been broken since yesterday. Can you send someone this week? Hi! We just moved into unit 12.",
         sol: { idea: '고장 대상, 시작 시점, 요청을 순서대로 말하면 상대가 상황을 빠르게 이해해요.',
           steps: ['The + 물건 + isn\'t working', 'since + 시점 (yesterday, Monday)', 'Can you send someone + 시기 (today, tomorrow)?'],
-          mistake: "급한 문제(누수, 가스 냄새 등)는 일반 요청서가 아니라 emergency 연락처로 바로 연락하는 게 안전해요.",
+          mistake: "누수 같은 급한 고장은 일반 요청서가 아니라 emergency 연락처로 바로 연락해요. 가스 냄새가 나면 먼저 집 밖으로 나가서 911이나 가스 회사에 연락하고, 그다음 관리실에 알려요.",
           more: '말로 설명이 어려우면 사진을 찍어 두었다가 보여 주는 방법도 도움이 돼요.' } }
     ]
   ]

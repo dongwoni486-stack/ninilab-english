@@ -4,7 +4,8 @@
 <title>니니랩 English 듣기</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
 <script>// 니니랩 English · 미국 생활 첫걸음 (가족편) / Unit 2 Doctor & Pharmacy
-// ME: 학습자(부모) 이름. 판매용은 'Me' 또는 'Mina' 등으로 교체
+// ME: 학습자(부모) 대사 표시 이름. 판매용은 'Me' 그대로 두기 (아이 이름 Mina로 바꾸면 대화가 깨짐)
+// 병원 이름·생년월일은 모두 가상(예시)
 const ME = 'Me';
 const big = s => `<span class="en say" style="font-size:15px;font-weight:800">${s}</span>`;
 window.BOOK = {
@@ -21,24 +22,24 @@ window.BOOK = {
       { type: 'stage', n: 1 },
       { type: 'section', tag: 'Talk', title: '병원에 전화해서 예약하기' },
       { type: 'listen' },
-      { type: 'dialog', scene: '소아과(clinic)에 전화를 걸었어요.', lines: [
-        { who: 'Clinic', en: 'Auburn Family Clinic. How can I help you?', ko: '오번 패밀리 클리닉입니다. 무엇을 도와드릴까요?' },
+      { type: 'dialog', scene: '소아과(가상 병원)에 전화를 걸었어요.', lines: [
+        { who: 'Clinic', en: 'Maple Kids Clinic. How can I help you?', ko: '메이플 키즈 클리닉입니다. 무엇을 도와드릴까요?' },
         { who: ME, me: true, en: "Hi. I'd like to make an appointment.", ko: '안녕하세요. 예약하고 싶어요.' },
-        { who: 'Clinic', en: 'Sure. Is this for you or your child?', ko: '네. 본인이세요, 아이세요?' },
+        { who: 'Clinic', en: "Sure. What's going on?", ko: '네. 어떤 일이세요?' },
         { who: ME, me: true, en: "It's for my daughter. She has a fever.", ko: '딸이에요. 열이 있어요.' },
         { who: 'Clinic', en: 'Can I have her name and date of birth?', ko: '이름과 생년월일을 알려 주시겠어요?' },
-        { who: ME, me: true, en: "Her name is Mina. It's April 9th, 2018.", ko: '이름은 미나예요. 2018년 4월 9일이에요.' },
+        { who: ME, me: true, en: "Her name is Mina. It's March 3rd, 2017.", ko: '이름은 미나예요. 2017년 3월 3일이에요.' },
         { who: 'Clinic', en: 'Thanks. Do you have insurance?', ko: '감사합니다. 보험 있으세요?' } ] },
       { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
       { type: 'phrases', items: [
         { en: "I'd like to make an appointment.", ko: '예약하고 싶어요.', note: '"book"보다 "make an appointment"가 일반적이에요.' },
         { en: 'She has a fever.', ko: '열이 있어요.', note: '증상은 "have + 증상"으로 말해요. have a cough(기침)' },
-        { en: 'Her date of birth is ...', ko: '생년월일은 ...예요.', note: '미국식: 월/일/연도 순서. 4/9/2018은 4월 9일(예시)' },
-        { en: 'Do you take this insurance?', ko: '이 보험 받으세요?', note: '병원이 해당 보험을 받는지 묻는 말' } ] },
+        { en: 'Her date of birth is ...', ko: '생년월일은 ...예요.', note: '미국식: 월/일/연도 순서. 3/3/2017 = 2017년 3월 3일(예시)' },
+        { en: 'Do you take this insurance?', ko: '이 보험 받으세요?', note: '"Are you in-network with ~?"(보험 네트워크 병원인가요?)도 확인' } ] },
       { type: 'tip', pose: 'idea', text: '미국 병원은 <b>예약제</b>가 일반적이고 대기가 길 수 있어요. 첫 방문은 <b>보험증(insurance card)</b>과 신분증을 챙기고 일찍 가는 경우가 많아요.' }
     ],
     [
-      { type: 'stage', n: 1 },
+      { type: 'stage', n: 2 },
       { type: 'section', tag: 'Symptoms', title: '증상 말하기 & 보험·비용' },
       { type: 'phrases', items: [
         { en: 'I have a headache.', ko: '머리가 아파요.', note: '"I have a ~ache" 패턴: stomachache(복통)' },
@@ -88,7 +89,7 @@ window.BOOK = {
       { type: 'card', label: '내 상황에 맞게 바꿔 쓰기', level: '상', title: '', question: '우리 가족 상황에 맞게 빈칸을 채워 소리 내어 읽어 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">I\'d like to make an appointment for ______________.<br>He/She has had ______________ since ______________.<br>He/She is allergic to ______________.<br>Do you take ______________ insurance?</span>',
         answer: `(예) I'd like to make an appointment for my daughter. She has had a cough since Monday. She is allergic to peanuts. Do you take this insurance?`,
         sol: { idea: '예약 대상 → 증상과 시작 시점 → 알레르기 → 보험 순서로 말하면 접수 직원이 필요한 정보를 한 번에 얻어요.',
-          steps: ['I\'d like to make an appointment for + 사람', 'has + 증상 + since + 시점', "is allergic to + 알레르기 원인", 'Do you take + 보험 이름 + insurance?'],
+          steps: ['I\'d like to make an appointment for + 사람', 'has had + 증상 + since + 시점', "is allergic to + 알레르기 원인", 'Do you take + 보험 이름 + insurance?'],
           mistake: 'since(~부터)와 함께 쓰면 "has had"(현재완료)가 자연스러워요. "has a cough since"는 어색해요.',
           more: '정확한 증상 판단과 약 복용은 의료진 안내를 따르세요. 본문은 표현 연습용이에요.' } }
     ]

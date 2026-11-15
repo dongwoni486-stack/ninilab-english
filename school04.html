@@ -13,41 +13,41 @@ window.BOOK = {
   gradeLabel: '미국 초등학교 적응 회화',
   unitNo: '04', unitTitle: 'Lunch Time', startPage: 28,
   cover: { title: 'Lunch<br>Time', subtitle: '급식 줄 서기, 메뉴 고르기, 알레르기 말하기, 친구와 같이 앉기 · Unit 4' },
-  tip: '부모님께: 알레르기는 입학 전에 학교 안내에 따라 미리 알려 주세요. 아이도 "I am allergic to ~."는 꼭 말할 수 있어야 해요.',
+  tip: '부모님께: 알레르기는 입학 전에 학교 안내에 따라 미리 알려 주세요. 알레르기가 있는 아이는 "I am allergic to ~."를 꼭 말할 수 있게, 없는 아이는 "I don\'t have any allergies."를 연습해 주세요.',
   pages: [
     [
       { type: 'stage', n: 1 },
       { type: 'section', tag: 'Talk', title: '급식실에서 메뉴 고르기' },
       { type: 'listen' },
-      { type: 'dialog', scene: '점심시간. 미나가 줄을 서서 급식을 받아요.', lines: [
-        { who: 'Cafeteria Lady', en: 'Hi, sweetheart. What would you like today?', ko: '안녕, 아가야. 오늘은 뭐 먹을래?' },
+      { type: 'dialog', scene: `점심시간. ${KID}도 줄을 서서 급식 담당 Ms. Davis에게 급식을 받아요.`, lines: [
+        { who: 'Ms. Davis', en: 'Hi, sweetheart. What would you like today?', ko: '안녕, 얏야. 오늘은 뭐 먹을래?' },
         { who: KID, me: true, en: 'Chicken nuggets, please.', ko: '치킨 너겟 주세요.' },
-        { who: 'Cafeteria Lady', en: 'Do you want corn or green beans?', ko: '옥수수 줄까, 껍질콩 줄까?' },
+        { who: 'Ms. Davis', en: 'Do you want corn or green beans?', ko: '옥수수 줄까, 껍질콩 줄까?' },
         { who: KID, me: true, en: 'Corn, please.', ko: '옥수수 주세요.' },
-        { who: 'Cafeteria Lady', en: "What's your lunch number?", ko: '점심 번호가 뭐니?' },
+        { who: 'Ms. Davis', en: "What's your lunch number?", ko: '점심 번호가 뭐니?' },
         { who: KID, me: true, en: 'Can I check my card?', ko: '카드를 봐도 될까요?' },
-        { who: 'Cafeteria Lady', en: 'Sure. Take your time.', ko: '그럼. 천천히 해.' } ] },
+        { who: 'Ms. Davis', en: 'Sure. Take your time.', ko: '그럼. 천천히 해.' } ] },
       { type: 'section', tag: 'Key', title: '오늘의 핵심 표현' },
       { type: 'phrases', items: [
         { en: 'Chicken nuggets, please.', ko: '치킨 너겟 주세요.', note: '메뉴 이름 + please면 충분해요.' },
         { en: "What's your lunch number?", ko: '점심 번호가 뭐니?', note: 'lunch account 번호를 묻는 경우가 많아요.' },
-        { en: 'I bring my lunch.', ko: '저는 도시락을 싸 와요.', note: 'lunch box를 쓰는 아이도 많아요.' },
+        { en: 'I brought my lunch.', ko: '저는 도시락을 싸 왔어요.', note: 'lunch box를 쓰는 아이도 많아요.' },
         { en: 'Take your time.', ko: '천천히 해도 돼.', note: '급하지 않다고 배려하는 말' } ] },
       { type: 'tip', pose: 'idea', text: '미국 학교는 <b>lunch account</b>에 돈을 미리 넣어 두고 번호나 카드로 계산하는 경우가 많아. 학교마다 달라서 학교 안내를 확인해!' }
     ],
     [
-      { type: 'stage', n: 1 },
+      { type: 'stage', n: 2 },
       { type: 'section', tag: 'Line', title: '줄 서기와 알레르기 말하기' },
       { type: 'phrases', items: [
         { en: 'Get in line.', ko: '줄 서요.', note: '급식 줄에서 자주 들어요.' },
-        { en: 'I am allergic to peanuts.', ko: '저는 땅콩 알레르기가 있어요.', note: 'allergic to + 음식. 아주 중요해요!' },
+        { en: 'I am allergic to peanuts.', ko: '저는 땅콩 알레르기가 있어요.', note: '알레르기가 있는 친구만 말해요.' },
         { en: 'Does this have nuts in it?', ko: '이거에 견과류 들어 있어요?', note: '음식이 안전한지 물어볼 때' },
         { en: 'No, thank you.', ko: '아니요, 괜찮아요.', note: '원치 않을 때 공손하게 거절해요.' },
         { en: 'Can I have some milk?', ko: '우유 좀 받을 수 있나요?', note: 'Can I have ~? = ~ 받을 수 있나요?' },
         { en: "I'm done.", ko: '다 먹었어요.', note: 'I am finished.도 같은 뜻' } ] },
       { type: 'section', tag: 'Friends', title: '같이 앉기와 정리하기' },
       { type: 'phrases', items: [
-        { en: 'Can I sit with you?', ko: '같이 앉아도 돼?', note: '혼자 있을 때 용기 내서 먼저 물어봐요.' },
+        { en: 'Can I sit with you?', ko: '같이 앉아도 돼?', note: '반끼리 정해진 자리에 앉는 학교도 많아요.' },
         { en: 'Do you want to sit with me?', ko: '나랑 같이 앉을래?', note: '친구에게 먼저 권할 때' },
         { en: 'Can I throw this away?', ko: '이거 버려도 돼요?', note: '다 먹은 뒤 쓰레기를 버릴 때' },
         { en: 'Please clean up your table.', ko: '자리를 정리해 주세요.', note: '먹은 자리를 정리하게 하는 학교가 많아요.' } ] },
@@ -75,17 +75,17 @@ window.BOOK = {
         { label: '연습 4', level: '중', question: '다 먹고 쓰레기를 버리고 싶어요. 빈칸을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">Can I ________ this away?</span><br><span style="font-size:12px">(뜻: 이거 버려도 돼요?)</span>', lines: 2, answer: 'throw',
           sol: { idea: "'throw away'는 '버리다'라는 한 덩어리 표현이에요.",
             steps: ['던지다 = throw', 'throw away = 버리다', 'Can I throw this away? = 이거 버려도 돼요?'],
-            check: "'this'는 손에 든 쓰레기를 가리키는 말이에요. trash를 넣어도 돼요.",
+            check: "'this'는 손에 든 쓰레기를 가리키는 말이에요. this 대신 my trash라고 해도 돼요.",
             more: "쓰레기통은 'trash can'이라고 해요." } }
       ] },
-      { type: 'card', label: '역할 놀이', level: '중', title: '엄마·아빠와 급식실 놀이', question: '부모님이 급식 선생님을 맡고 나는 나 자신을 맡아요. 메뉴를 고르고 알레르기도 말해 보세요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ Chicken nuggets, please. □ No, thank you. □ Can I sit with you? □ I\'m done.',
+      { type: 'card', label: '역할 놀이', level: '중', title: '엄마·아빠와 급식실 놀이', question: '부모님이 급식 선생님을 맡고 나는 나 자신을 맡아요. 메뉴를 고르고, 알레르기가 있는 친구는 알레르기도 말해 보세요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ Chicken nuggets, please. □ No, thank you. □ Can I sit with you? □ I\'m done.',
         answer: '(활동)', sol: { idea: '메뉴 이름 + please 틀만 알면 주문은 쉬워요. 실제 접시를 두고 해 보면 더 좋아요.', steps: ['먹고 싶은 메뉴 말하기', '원치 않으면 No, thank you', '다 먹으면 I\'m done'], parent: '메뉴 이름을 바꿔서 여러 번 해 보세요.' } },
       { type: 'stage', n: 4 },
-      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '내가 좋아하는 점심을 말해 보세요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">______________, please.<br>I am allergic to ______________.<br>Can I sit with ______________?</span>',
-        answer: '(예) Pizza, please. I am allergic to shrimp. Can I sit with you?',
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '내가 좋아하는 점심을 말해 보세요. 알레르기가 없으면 둘째 줄은 <b class="en">I don\'t have any allergies.</b>로 말해요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">______________, please.<br>I am allergic to ______________.<br>Can I sit with ______________?</span>',
+        answer: "(예) Pizza, please. I don't have any allergies. Can I sit with you?",
         sol: { idea: '주문, 알레르기, 같이 앉기 세 가지를 말할 수 있으면 점심시간이 편해져요.',
-          steps: ['메뉴 이름 + please', 'I am allergic to + 음식', 'Can I sit with + 사람?'],
-          mistake: "알레르기가 없으면 이 문장은 쓰지 않아도 돼요. 없다면 'I like ~'로 바꿔도 돼요.",
+          steps: ['메뉴 이름 + please', "알레르기 있음: I am allergic to + 음식 / 없음: I don't have any allergies.", 'Can I sit with + 사람?'],
+          mistake: "없는 알레르기를 학교에서 말하면 급식이 제한되거나 집으로 연락이 갈 수 있어요. 연습이라도 사실대로 말해요.",
           more: '다음 유닛에서도 학교 생활 표현을 이어서 배워요.' } }
     ]
   ]
