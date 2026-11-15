@@ -20,7 +20,7 @@ window.BOOK = {
       { type: 'section', tag: 'Talk', title: '급식실에서 메뉴 고르기' },
       { type: 'listen' },
       { type: 'dialog', scene: `점심시간. ${KID}도 줄을 서서 급식 담당 Ms. Davis에게 급식을 받아요.`, lines: [
-        { who: 'Ms. Davis', en: 'Hi, sweetheart. What would you like today?', ko: '안녕, 얏야. 오늘은 뭐 먹을래?' },
+        { who: 'Ms. Davis', en: 'Hi, sweetheart. What would you like today?', ko: '안녕, 얘야. 오늘은 뭐 먹을래?' },
         { who: KID, me: true, en: 'Chicken nuggets, please.', ko: '치킨 너겟 주세요.' },
         { who: 'Ms. Davis', en: 'Do you want corn or green beans?', ko: '옥수수 줄까, 껍질콩 줄까?' },
         { who: KID, me: true, en: 'Corn, please.', ko: '옥수수 주세요.' },
@@ -52,9 +52,9 @@ window.BOOK = {
         { en: 'Can I throw this away?', ko: '이거 버려도 돼요?', note: '다 먹은 뒤 쓰레기를 버릴 때' },
         { en: 'Please clean up your table.', ko: '자리를 정리해 주세요.', note: '먹은 자리를 정리하게 하는 학교가 많아요.' } ] },
       { type: 'grid', items: [
-        { label: '연습 1', level: '하', question: '땅콩 알레르기가 있어요. 급식 선생님께 뭐라고 말할까요?',
+        { label: '연습 1', level: '하', question: '땅콩 알레르기가 있는 친구라면 급식 선생님께 뭐라고 말할까요?',
           choices: ["I'm done.", 'I am allergic to peanuts.', 'Get in line.'], answer: '②', lines: 0,
-          sol: { idea: 'allergic to 뒤에 알레르기 음식 이름을 넣어요. 알레르기는 꼭 말해야 하는 중요한 문장이에요.',
+          sol: { idea: 'allergic to 뒤에 알레르기 음식 이름을 넣어요. 알레르기가 있는 친구에게 꼭 필요한 문장이에요.',
             steps: ['알레르기가 있다 = I am allergic to', '음식 이름 = peanuts', '문장 완성'],
             check: "'I'm done.'은 다 먹었다는 뜻이라 상황과 맞지 않아요.",
             parent: 'milk, eggs, shrimp 등 우리 아이와 관련된 음식 이름도 같이 연습해 주세요.' } },
@@ -68,7 +68,7 @@ window.BOOK = {
     [
       { type: 'stage', n: 3 },
       { type: 'grid', items: [
-        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">I am ________ to eggs.</span><br><span style="font-size:12px">(뜻: 저는 달걀 알레르기가 있어요)</span>', lines: 2, answer: 'allergic',
+        { label: '연습 3', level: '중', question: '빈칸에 알맞은 말을 쓰세요.<br><span class="en" style="font-size:15px;font-weight:800">I am ________ to eggs.</span><br><span style="font-size:12px">(뜻: 저는 달걀 알레르기가 있어요 · 알레르기가 있는 친구가 쓰는 말)</span>', lines: 2, answer: 'allergic',
           sol: { idea: "'~ 알레르기가 있다'는 allergic to를 한 덩어리로 써요.",
             steps: ['알레르기가 있는 = allergic', "to 뒤에 음식 이름"],
             mistake: "'allergy'는 명사(알레르기)라서 'I am allergy to'라고 하지 않아요. allergic이 맞아요." } },
@@ -81,11 +81,11 @@ window.BOOK = {
       { type: 'card', label: '역할 놀이', level: '중', title: '엄마·아빠와 급식실 놀이', question: '부모님이 급식 선생님을 맡고 나는 나 자신을 맡아요. 메뉴를 고르고, 알레르기가 있는 친구는 알레르기도 말해 보세요.<br><span style="font-size:22px;letter-spacing:6px">○ ○ ○ ○ ○</span><br>잘 된 표현에 ✓ 하세요: □ Chicken nuggets, please. □ No, thank you. □ Can I sit with you? □ I\'m done.',
         answer: '(활동)', sol: { idea: '메뉴 이름 + please 틀만 알면 주문은 쉬워요. 실제 접시를 두고 해 보면 더 좋아요.', steps: ['먹고 싶은 메뉴 말하기', '원치 않으면 No, thank you', '다 먹으면 I\'m done'], parent: '메뉴 이름을 바꿔서 여러 번 해 보세요.' } },
       { type: 'stage', n: 4 },
-      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '내가 좋아하는 점심을 말해 보세요. 알레르기가 없으면 둘째 줄은 <b class="en">I don\'t have any allergies.</b>로 말해요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">______________, please.<br>I am allergic to ______________.<br>Can I sit with ______________?</span>',
-        answer: "(예) Pizza, please. I don't have any allergies. Can I sit with you?",
+      { type: 'card', label: '나만의 문장', level: '상', title: '', question: '내가 좋아하는 점심을 말해 보세요. 둘째 줄은 선생님이 알레르기를 물을 때 사실대로 골라요.<br><span class="en" style="font-size:16px;font-weight:800;line-height:2.4">______________, please.<br>(Do you have any allergies?) □ No, I don\'t. □ Yes, I\'m allergic to ________.<br>Can I sit with ______________?</span>',
+        answer: "(예) Pizza, please. (Do you have any allergies?) No, I don't. Can I sit with you?",
         sol: { idea: '주문, 알레르기, 같이 앉기 세 가지를 말할 수 있으면 점심시간이 편해져요.',
-          steps: ['메뉴 이름 + please', "알레르기 있음: I am allergic to + 음식 / 없음: I don't have any allergies.", 'Can I sit with + 사람?'],
-          mistake: "없는 알레르기를 학교에서 말하면 급식이 제한되거나 집으로 연락이 갈 수 있어요. 연습이라도 사실대로 말해요.",
+          steps: ['메뉴 이름 + please', "알레르기를 물으면 없음: No, I don't. / 있음: Yes, I'm allergic to + 음식", 'Can I sit with + 사람?'],
+          mistake: "알레르기는 정말 있는 것만 말해요. 없으면 I don't have any allergies.라고 하면 돼요.",
           more: '다음 유닛에서도 학교 생활 표현을 이어서 배워요.' } }
     ]
   ]
